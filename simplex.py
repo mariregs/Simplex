@@ -9,9 +9,9 @@ logging.basicConfig(
 )
 
 # Alterar o nome da aba para 'Modelo_2', 'Modelo_3', para usar outro modelo
-df = pd.read_excel('Modelos_Simplex.xlsx', sheet_name='Modelo_1')
+# df = pd.read_excel('Modelos_Simplex.xlsx', sheet_name='Modelo_1')
 # df = pd.read_excel('Modelos_Simplex.xlsx', sheet_name='Modelo_2')
-# df = pd.read_excel('Modelos_Simplex.xlsx', sheet_name='Modelo_3')
+df = pd.read_excel('Modelos_Simplex.xlsx', sheet_name='Modelo_3')
 
 print("\n====== LENDO O MODELO ======")
 print(df)
@@ -20,7 +20,6 @@ logging.info("Lendo o modelo.")
 # Variáveis e parâmetros do modelo
 tipo_objetivo = df['Objetivo'][0]
 
-# Verifique a estrutura do DataFrame e ajuste as referências às colunas de acordo com a necessidade
 variaveis = df['Unnamed: 0'].dropna().tolist()[1:]
 variaveis = np.array(variaveis).reshape(-1, 1)
 
@@ -623,46 +622,12 @@ valores_basicos = [x_base[i][0] for i in range(len(x_base))]
 for i in range(len(b)):
     coluna = B_inv[:, i]
 
-    aumentos = [valores_basicos[j] / coluna[j] for j in range(len(coluna)) if coluna[j] > 0]
-    diminuicoes = [valores_basicos[j] / coluna[j] for j in range(len(coluna)) if coluna[j] < 0]
+    diminuicoes = [valores_basicos[j] / coluna[j] for j in range(len(coluna)) if coluna[j] > 0]
+    aumentos = [valores_basicos[j] / coluna[j] for j in range(len(coluna)) if coluna[j] < 0]
 
-    max_aumento = min(aumentos) if aumentos else np.inf
-    max_diminuicao = -max(diminuicoes) if diminuicoes else np.inf
+    max_aumento = -max(aumentos) if aumentos else np.inf
+    max_diminuicao = min(diminuicoes) if diminuicoes else np.inf
 
     print(f"Recurso {i+1}:")
-    print(f"  Pode aumentar até {max_aumento:.2f}")
-    print(f"  Pode diminuir até {max_diminuicao:.2f}")
-
-n_variaveis_originais = len(variaveis)
-
-print("\nVariações Coeficientes (somente variáveis originais):")
-for i in range(n_variaveis_originais):
-    if i in indices_base:
-        j = indices_base.index(i)
-        c_barra = []
-
-        for k in indices_nao_base:
-            ck = c_padrao[0][k]
-            ak = A_padrao[:, k]
-            cb = c_padrao[:, indices_base]
-            custo_red = ck - np.dot(cb, np.dot(B_inv, ak))
-            c_barra.append(custo_red[0])
-
-        delta_min = max([-c for c in c_barra if c > 0] + [-np.inf])
-        delta_max = min([-c for c in c_barra if c < 0] + [np.inf])
-
-        print(f"Custo c{i+1} ({variaveis[i]}):")
-        print(f"  Pode variar entre [{c_padrao[0][i] + delta_min:.2f}, {c_padrao[0][i] + delta_max:.2f}]")
-
-    else:
-        custo_red = c_padrao[0][i] - np.dot(p, A_padrao[:, i])
-
-        print(f"Custo c{i+1} ({variaveis[i]}):")
-        if custo_red[0] > 0:
-            print(f"  Pode diminuir indefinidamente")
-            print(f"  Pode aumentar até {c_padrao[0][i] + custo_red[0]:.2f}")
-        elif custo_red[0] < 0:
-            print(f"  Pode aumentar indefinidamente")
-            print(f"  Pode diminuir até {c_padrao[0][i] - abs(custo_red[0]):.2f}")
-        else:
-            print("  Não pode variar")
+    print(f"  Pode aumentar: {max_aumento:.2f}")
+    print(f"  Pode diminuir: {max_diminuicao:.2f}")
