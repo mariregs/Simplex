@@ -1,436 +1,891 @@
-2025-05-07 15:11:23,843 - INFO - Lendo o modelo.
-2025-05-07 15:11:23,850 - INFO - Imprimindo modelo primal.
-2025-05-07 15:11:23,850 - DEBUG - - Tipo: Max
-2025-05-07 15:11:23,850 - DEBUG - - Vetor x: [['x1']
+2025-05-08 23:19:54,836 - INFO - Lendo o modelo.
+2025-05-08 23:19:54,840 - INFO - Imprimindo modelo primal.
+2025-05-08 23:19:54,840 - DEBUG - - Tipo: Max
+2025-05-08 23:19:54,840 - DEBUG - - Vetor x: [['x1']
  ['x2']]
-2025-05-07 15:11:23,851 - DEBUG - - Vetor c: [[3 5]]
-2025-05-07 15:11:23,851 - DEBUG - - Matriz A:
+2025-05-08 23:19:54,841 - DEBUG - - Vetor c: [[3 5]]
+2025-05-08 23:19:54,841 - DEBUG - - Matriz A:
 [[1 0]
  [0 2]
  [3 2]]
-2025-05-07 15:11:23,851 - DEBUG - - Vetor b: [[ 4]
- [12]
- [18]]
-2025-05-07 15:11:23,851 - DEBUG - - Sinais das restrições: ['<=', '<=', '<=']
-2025-05-07 15:11:23,854 - INFO - Transformando modelo primal na forma padrão.
-2025-05-07 15:11:23,854 - DEBUG - - Tipo: Min
-2025-05-07 15:11:23,855 - DEBUG - - Vetor x: [['x1']
+2025-05-08 23:19:54,841 - DEBUG - - Vetor b: [[ 4.]
+ [12.]
+ [18.]]
+2025-05-08 23:19:54,841 - DEBUG - - Sinais das restrições: ['<=', '<=', '<=']
+2025-05-08 23:19:54,844 - INFO - Transformando modelo primal na forma padrão.
+2025-05-08 23:19:54,844 - DEBUG - - Tipo: Min
+2025-05-08 23:19:54,845 - DEBUG - - Vetor x: [['x1']
  ['x2']
  ['f3']
  ['f4']
  ['f5']]
-2025-05-07 15:11:23,855 - DEBUG - - Vetor c: [[-3 -5  0  0  0]]
-2025-05-07 15:11:23,856 - DEBUG - - Matriz A:
-[[1 0 1.0 0.0 0.0]
- [0 2 0.0 1.0 0.0]
- [3 2 0.0 0.0 1.0]]
-2025-05-07 15:11:23,856 - DEBUG - - Vetor b: [[ 4]
- [12]
- [18]]
-2025-05-07 15:11:23,856 - DEBUG - - Sinais das restrições: ['=', '=', '=']
-2025-05-07 15:11:23,856 - INFO - Gerando modelo dual.
-2025-05-07 15:11:23,859 - DEBUG - - Tipo: Max
-2025-05-07 15:11:23,859 - DEBUG - - Vetor y: [['y1']
+2025-05-08 23:19:54,845 - DEBUG - - Vetor c: [[-3 -5  0  0  0]]
+2025-05-08 23:19:54,846 - DEBUG - - Matriz A:
+[[1. 0. 1. 0. 0.]
+ [0. 2. 0. 1. 0.]
+ [3. 2. 0. 0. 1.]]
+2025-05-08 23:19:54,846 - DEBUG - - Vetor b: [[ 4.]
+ [12.]
+ [18.]]
+2025-05-08 23:19:54,846 - DEBUG - - Sinais das restrições: ['=', '=', '=']
+2025-05-08 23:19:54,846 - INFO - Gerando modelo dual.
+2025-05-08 23:19:54,849 - DEBUG - - Tipo: Min
+2025-05-08 23:19:54,849 - DEBUG - - Vetor y: [['y1']
  ['y2']
  ['y3']]
-2025-05-07 15:11:23,859 - DEBUG - - Vetor b_dual: [[-3]
- [-5]
- [ 0]
- [ 0]
- [ 0]]
-2025-05-07 15:11:23,859 - DEBUG - - Matriz A_dual:
+2025-05-08 23:19:54,849 - DEBUG - - Vetor b_dual: [[3]
+ [5]]
+2025-05-08 23:19:54,849 - DEBUG - - Matriz A_dual:
 [[1 0 3]
- [0 2 2]
- [1.0 0.0 0.0]
- [0.0 1.0 0.0]
- [0.0 0.0 1.0]]
-2025-05-07 15:11:23,860 - DEBUG - - Vetor c_dual: [[ 4 12 18]]
-2025-05-07 15:11:23,860 - DEBUG - - Sinais das restrições: ['<=', '<=', '<=']
-2025-05-07 15:11:23,861 - INFO - Verificando de o modelo e factivel.
-2025-05-07 15:11:23,862 - INFO - O problema NÃO precisa de variáveis artificiais.
-2025-05-07 15:11:23,862 - INFO - Simplex
-2025-05-07 15:11:23,863 - INFO - Investendo a matriz B
-2025-05-07 15:11:23,871 - INFO - Resolvendo o sistema para encontrar solução básica viável
-2025-05-07 15:11:23,873 - DEBUG - Valor da função objetivo: -0.0
-2025-05-07 15:11:23,874 - INFO - Solução básica viável:
-2025-05-07 15:11:23,874 - DEBUG - x1 = 0.0
-2025-05-07 15:11:23,874 - DEBUG - x2 = 0.0
-2025-05-07 15:11:23,874 - DEBUG - f3 = 4.0
-2025-05-07 15:11:23,874 - DEBUG - f4 = 12.0
-2025-05-07 15:11:23,874 - DEBUG - f5 = 18.0
-2025-05-07 15:11:23,874 - INFO - Interação 1
-2025-05-07 15:11:23,875 - INFO - Custos reduzido:
-2025-05-07 15:11:23,875 - DEBUG - s1 = [-3.0]
-2025-05-07 15:11:23,876 - DEBUG - s2 = [-5.0]
-2025-05-07 15:11:23,876 - DEBUG - Menor valor em c: -5.0
-2025-05-07 15:11:23,876 - DEBUG - Sim, é possível melhorar a solução.
-2025-05-07 15:11:23,877 - DEBUG - 
+ [0 2 2]]
+2025-05-08 23:19:54,850 - DEBUG - - Vetor c_dual: [[ 4. 12. 18.]]
+2025-05-08 23:19:54,850 - DEBUG - - Sinais das restrições: ['<=', '<=', '<=']
+2025-05-08 23:19:54,850 - DEBUG - - Variaveis: ['y1 >= 0', 'y2 >= 0', 'y3 >= 0']
+2025-05-08 23:19:54,850 - INFO - Verificando de o modelo e factivel.
+2025-05-08 23:19:54,851 - INFO - O problema NÃO precisa de variáveis artificiais.
+2025-05-08 23:19:54,851 - INFO - Simplex
+2025-05-08 23:19:54,851 - INFO - Investendo a matriz B
+2025-05-08 23:19:54,853 - INFO - Resolvendo o sistema para encontrar solução básica viável
+2025-05-08 23:19:54,855 - DEBUG - Valor da função objetivo: -0.0
+2025-05-08 23:19:54,855 - INFO - Solução básica viável:
+2025-05-08 23:19:54,855 - DEBUG - x1 = 0.0
+2025-05-08 23:19:54,855 - DEBUG - x2 = 0.0
+2025-05-08 23:19:54,855 - DEBUG - f3 = 4.0
+2025-05-08 23:19:54,855 - DEBUG - f4 = 12.0
+2025-05-08 23:19:54,855 - DEBUG - f5 = 18.0
+2025-05-08 23:19:54,856 - INFO - Interação 1
+2025-05-08 23:19:54,856 - INFO - Custos reduzido:
+2025-05-08 23:19:54,857 - DEBUG - s1 = [-3.]
+2025-05-08 23:19:54,857 - DEBUG - s2 = [-5.]
+2025-05-08 23:19:54,857 - DEBUG - Menor valor em c: -5.0
+2025-05-08 23:19:54,858 - DEBUG - Sim, é possível melhorar a solução.
+2025-05-08 23:19:54,858 - DEBUG - 
 Variável que vai entrar na base: ['x2']
-2025-05-07 15:11:23,878 - DEBUG - Variável que vai sair da base: ['f4']
-2025-05-07 15:11:23,878 - DEBUG - Valor máximo que a variável de entrada pode assumir: 6.0
-2025-05-07 15:11:23,882 - DEBUG - 
+2025-05-08 23:19:54,859 - DEBUG - Variável que vai sair da base: ['f4']
+2025-05-08 23:19:54,859 - DEBUG - Valor máximo que a variável de entrada pode assumir: 6.0
+2025-05-08 23:19:54,862 - DEBUG - 
 Novo valor da função objetivo: 30.0
-2025-05-07 15:11:23,882 - INFO - Nova solução básica viável:
-2025-05-07 15:11:23,882 - DEBUG - x1 = 0.0
-2025-05-07 15:11:23,882 - DEBUG - x2 = 6.0
-2025-05-07 15:11:23,882 - DEBUG - f3 = 4.0
-2025-05-07 15:11:23,882 - DEBUG - f4 = 0.0
-2025-05-07 15:11:23,882 - DEBUG - f5 = 6.0
-2025-05-07 15:11:23,883 - INFO - Interação 2
-2025-05-07 15:11:23,883 - INFO - Custos reduzido:
-2025-05-07 15:11:23,884 - DEBUG - s1 = [-3.0]
-2025-05-07 15:11:23,884 - DEBUG - s4 = [2.5]
-2025-05-07 15:11:23,885 - DEBUG - Menor valor em c: -3.0
-2025-05-07 15:11:23,885 - DEBUG - Sim, é possível melhorar a solução.
-2025-05-07 15:11:23,886 - DEBUG - 
+2025-05-08 23:19:54,862 - INFO - Nova solução básica viável:
+2025-05-08 23:19:54,862 - DEBUG - x1 = 0.0
+2025-05-08 23:19:54,863 - DEBUG - x2 = 6.0
+2025-05-08 23:19:54,863 - DEBUG - f3 = 4.0
+2025-05-08 23:19:54,863 - DEBUG - f4 = 0.0
+2025-05-08 23:19:54,863 - DEBUG - f5 = 6.0
+2025-05-08 23:19:54,864 - INFO - Interação 2
+2025-05-08 23:19:54,864 - INFO - Custos reduzido:
+2025-05-08 23:19:54,865 - DEBUG - s1 = [-3.]
+2025-05-08 23:19:54,865 - DEBUG - s4 = [2.5]
+2025-05-08 23:19:54,865 - DEBUG - Menor valor em c: -3.0
+2025-05-08 23:19:54,866 - DEBUG - Sim, é possível melhorar a solução.
+2025-05-08 23:19:54,866 - DEBUG - 
 Variável que vai entrar na base: ['x1']
-2025-05-07 15:11:23,886 - DEBUG - Variável que vai sair da base: ['f5']
-2025-05-07 15:11:23,886 - DEBUG - Valor máximo que a variável de entrada pode assumir: 2.0
-2025-05-07 15:11:23,889 - DEBUG - 
+2025-05-08 23:19:54,867 - DEBUG - Variável que vai sair da base: ['f5']
+2025-05-08 23:19:54,867 - DEBUG - Valor máximo que a variável de entrada pode assumir: 2.0
+2025-05-08 23:19:54,869 - DEBUG - 
 Novo valor da função objetivo: 36.0
-2025-05-07 15:11:23,889 - INFO - Nova solução básica viável:
-2025-05-07 15:11:23,889 - DEBUG - x1 = 1.9999999999999996
-2025-05-07 15:11:23,889 - DEBUG - x2 = 6.0
-2025-05-07 15:11:23,889 - DEBUG - f3 = 2.0000000000000004
-2025-05-07 15:11:23,889 - DEBUG - f4 = 0.0
-2025-05-07 15:11:23,889 - DEBUG - f5 = 0.0
-2025-05-07 15:11:23,890 - INFO - Interação 3
-2025-05-07 15:11:23,891 - INFO - Custos reduzido:
-2025-05-07 15:11:23,891 - DEBUG - s4 = [1.5]
-2025-05-07 15:11:23,891 - DEBUG - s5 = [1.0]
-2025-05-07 15:11:23,892 - DEBUG - Menor valor em c: 1.0
-2025-05-07 15:11:23,892 - ERROR - Não, não é possível melhorar a solução.
-2025-05-07 15:11:23,892 - INFO - Solução Otima do Primal:
-2025-05-07 15:11:23,894 - INFO - Solução do Dual:
-2025-05-07 15:11:23,894 - DEBUG - Valor ótimo da função objetivo: 36.0
-2025-05-07 15:11:23,895 - DEBUG - y1 = 0 (Componente em abundância)
-2025-05-07 15:11:23,895 - DEBUG - y2 = 1.5 (Componente que limita a produção)
-2025-05-07 15:11:23,896 - DEBUG - y3 = 1.0 (Componente que limita a produção)
-2025-05-07 15:11:23,896 - INFO - O componente que mais limita a produção é y2
-2025-05-07 15:11:23,897 - INFO - Fazendo analise de sensibilidade.
-2025-05-07 15:11:23,899 - DEBUG - Restrição 1 | 2.0000 <= 4 | y1 = 0.0000 (abundante)
-2025-05-07 15:11:23,899 - DEBUG - Restrição 2 | 12.0000 <= 12 | y2 = -1.5000 (limitante)
-2025-05-07 15:11:23,900 - DEBUG - Restrição 3 | 18.0000 <= 18 | y3 = -1.0000 (limitante)
-2025-05-07 15:11:23,900 - DEBUG - Variável x1 = 2.0000 | Custo reduzido = 0.0 | Coeficiente = 3
-2025-05-07 15:11:23,901 - DEBUG - Variável x2 = 6.0000 | Custo reduzido = 0.0 | Coeficiente = 5
-2025-05-07 15:11:30,782 - INFO - Lendo o modelo.
-2025-05-07 15:11:30,787 - INFO - Imprimindo modelo primal.
-2025-05-07 15:11:30,787 - DEBUG - - Tipo: Max
-2025-05-07 15:11:30,788 - DEBUG - - Vetor x: [['x1']
+2025-05-08 23:19:54,869 - INFO - Nova solução básica viável:
+2025-05-08 23:19:54,869 - DEBUG - x1 = 1.9999999999999996
+2025-05-08 23:19:54,869 - DEBUG - x2 = 6.0
+2025-05-08 23:19:54,870 - DEBUG - f3 = 2.0000000000000004
+2025-05-08 23:19:54,870 - DEBUG - f4 = 0.0
+2025-05-08 23:19:54,870 - DEBUG - f5 = 0.0
+2025-05-08 23:19:54,870 - INFO - Interação 3
+2025-05-08 23:19:54,871 - INFO - Custos reduzido:
+2025-05-08 23:19:54,871 - DEBUG - s4 = [1.5]
+2025-05-08 23:19:54,872 - DEBUG - s5 = [1.]
+2025-05-08 23:19:54,872 - DEBUG - Menor valor em c: 1.0
+2025-05-08 23:19:54,872 - ERROR - Não, não é possível melhorar a solução.
+2025-05-08 23:19:54,873 - INFO - Solução Otima do Primal:
+2025-05-08 23:19:54,874 - INFO - Solução do Dual:
+2025-05-08 23:19:54,874 - DEBUG - Valor ótimo da função objetivo: 36.0
+2025-05-08 23:19:54,875 - DEBUG - y1 = 0 (Componente em abundância)
+2025-05-08 23:19:54,875 - DEBUG - y2 = 1.5 (Componente que limita a produção)
+2025-05-08 23:19:54,875 - DEBUG - y3 = 1.0 (Componente que limita a produção)
+2025-05-08 23:19:54,876 - INFO - O componente que mais limita a produção é y2
+2025-05-08 23:19:54,876 - INFO - Fazendo analise de sensibilidade.
+2025-05-08 23:19:54,877 - DEBUG - Restrição 1 | 2.0000 <= 4.0 | y1 = 0.0000 (abundante)
+2025-05-08 23:19:54,877 - DEBUG - Restrição 2 | 12.0000 <= 12.0 | y2 = -1.5000 (limitante)
+2025-05-08 23:19:54,878 - DEBUG - Restrição 3 | 18.0000 <= 18.0 | y3 = -1.0000 (limitante)
+2025-05-08 23:19:54,878 - DEBUG - Variável x1 = 2.0000 | Custo reduzido = 0.0 | Coeficiente = 3
+2025-05-08 23:19:54,879 - DEBUG - Variável x2 = 6.0000 | Custo reduzido = 0.0 | Coeficiente = 5
+2025-05-08 23:20:31,169 - INFO - Lendo o modelo.
+2025-05-08 23:20:31,174 - INFO - Imprimindo modelo primal.
+2025-05-08 23:20:31,174 - DEBUG - - Tipo: Max
+2025-05-08 23:20:31,175 - DEBUG - - Vetor x: [['x1']
  ['x2']
  ['x3']
  ['x4']]
-2025-05-07 15:11:30,788 - DEBUG - - Vetor c: [[19 13 12 17]]
-2025-05-07 15:11:30,789 - DEBUG - - Matriz A:
+2025-05-08 23:20:31,175 - DEBUG - - Vetor c: [[19 13 12 17]]
+2025-05-08 23:20:31,176 - DEBUG - - Matriz A:
 [[3 2 1 2]
  [1 1 1 1]
  [4 3 3 4]]
-2025-05-07 15:11:30,789 - DEBUG - - Vetor b: [[225]
- [117]
- [420]]
-2025-05-07 15:11:30,790 - DEBUG - - Sinais das restrições: ['<=', '<=', '<=']
-2025-05-07 15:11:30,792 - INFO - Transformando modelo primal na forma padrão.
-2025-05-07 15:11:30,793 - DEBUG - - Tipo: Min
-2025-05-07 15:11:30,793 - DEBUG - - Vetor x: [['x1']
+2025-05-08 23:20:31,176 - DEBUG - - Vetor b: [[225.]
+ [117.]
+ [420.]]
+2025-05-08 23:20:31,177 - DEBUG - - Sinais das restrições: ['<=', '<=', '<=']
+2025-05-08 23:20:31,179 - INFO - Transformando modelo primal na forma padrão.
+2025-05-08 23:20:31,179 - DEBUG - - Tipo: Min
+2025-05-08 23:20:31,180 - DEBUG - - Vetor x: [['x1']
  ['x2']
  ['x3']
  ['x4']
  ['f5']
  ['f6']
  ['f7']]
-2025-05-07 15:11:30,794 - DEBUG - - Vetor c: [[-19 -13 -12 -17   0   0   0]]
-2025-05-07 15:11:30,794 - DEBUG - - Matriz A:
-[[3 2 1 2 1.0 0.0 0.0]
- [1 1 1 1 0.0 1.0 0.0]
- [4 3 3 4 0.0 0.0 1.0]]
-2025-05-07 15:11:30,795 - DEBUG - - Vetor b: [[225]
- [117]
- [420]]
-2025-05-07 15:11:30,795 - DEBUG - - Sinais das restrições: ['=', '=', '=']
-2025-05-07 15:11:30,795 - INFO - Gerando modelo dual.
-2025-05-07 15:11:30,798 - DEBUG - - Tipo: Max
-2025-05-07 15:11:30,798 - DEBUG - - Vetor y: [['y1']
+2025-05-08 23:20:31,180 - DEBUG - - Vetor c: [[-19 -13 -12 -17   0   0   0]]
+2025-05-08 23:20:31,181 - DEBUG - - Matriz A:
+[[3. 2. 1. 2. 1. 0. 0.]
+ [1. 1. 1. 1. 0. 1. 0.]
+ [4. 3. 3. 4. 0. 0. 1.]]
+2025-05-08 23:20:31,181 - DEBUG - - Vetor b: [[225.]
+ [117.]
+ [420.]]
+2025-05-08 23:20:31,182 - DEBUG - - Sinais das restrições: ['=', '=', '=']
+2025-05-08 23:20:31,182 - INFO - Gerando modelo dual.
+2025-05-08 23:20:31,185 - DEBUG - - Tipo: Min
+2025-05-08 23:20:31,185 - DEBUG - - Vetor y: [['y1']
  ['y2']
  ['y3']]
-2025-05-07 15:11:30,799 - DEBUG - - Vetor b_dual: [[-19]
- [-13]
- [-12]
- [-17]
- [  0]
- [  0]
- [  0]]
-2025-05-07 15:11:30,799 - DEBUG - - Matriz A_dual:
+2025-05-08 23:20:31,186 - DEBUG - - Vetor b_dual: [[19]
+ [13]
+ [12]
+ [17]]
+2025-05-08 23:20:31,186 - DEBUG - - Matriz A_dual:
 [[3 1 4]
  [2 1 3]
  [1 1 3]
- [2 1 4]
- [1.0 0.0 0.0]
- [0.0 1.0 0.0]
- [0.0 0.0 1.0]]
-2025-05-07 15:11:30,800 - DEBUG - - Vetor c_dual: [[225 117 420]]
-2025-05-07 15:11:30,800 - DEBUG - - Sinais das restrições: ['<=', '<=', '<=']
-2025-05-07 15:11:30,801 - INFO - Verificando de o modelo e factivel.
-2025-05-07 15:11:30,801 - INFO - O problema NÃO precisa de variáveis artificiais.
-2025-05-07 15:11:30,802 - INFO - Simplex
-2025-05-07 15:11:30,803 - INFO - Investendo a matriz B
-2025-05-07 15:11:30,804 - INFO - Resolvendo o sistema para encontrar solução básica viável
-2025-05-07 15:11:30,807 - DEBUG - Valor da função objetivo: -0.0
-2025-05-07 15:11:30,807 - INFO - Solução básica viável:
-2025-05-07 15:11:30,808 - DEBUG - x1 = 0.0
-2025-05-07 15:11:30,808 - DEBUG - x2 = 0.0
-2025-05-07 15:11:30,808 - DEBUG - x3 = 0.0
-2025-05-07 15:11:30,809 - DEBUG - x4 = 0.0
-2025-05-07 15:11:30,809 - DEBUG - f5 = 225.0
-2025-05-07 15:11:30,809 - DEBUG - f6 = 117.0
-2025-05-07 15:11:30,810 - DEBUG - f7 = 420.0
-2025-05-07 15:11:30,810 - INFO - Interação 1
-2025-05-07 15:11:30,811 - INFO - Custos reduzido:
-2025-05-07 15:11:30,812 - DEBUG - s1 = [-19.0]
-2025-05-07 15:11:30,813 - DEBUG - s2 = [-13.0]
-2025-05-07 15:11:30,813 - DEBUG - s3 = [-12.0]
-2025-05-07 15:11:30,814 - DEBUG - s4 = [-17.0]
-2025-05-07 15:11:30,814 - DEBUG - Menor valor em c: -19.0
-2025-05-07 15:11:30,815 - DEBUG - Sim, é possível melhorar a solução.
-2025-05-07 15:11:30,816 - DEBUG - 
+ [2 1 4]]
+2025-05-08 23:20:31,187 - DEBUG - - Vetor c_dual: [[225. 117. 420.]]
+2025-05-08 23:20:31,187 - DEBUG - - Sinais das restrições: ['<=', '<=', '<=']
+2025-05-08 23:20:31,188 - DEBUG - - Variaveis: ['y1 >= 0', 'y2 >= 0', 'y3 >= 0']
+2025-05-08 23:20:31,188 - INFO - Verificando de o modelo e factivel.
+2025-05-08 23:20:31,189 - INFO - O problema NÃO precisa de variáveis artificiais.
+2025-05-08 23:20:31,190 - INFO - Simplex
+2025-05-08 23:20:31,190 - INFO - Investendo a matriz B
+2025-05-08 23:20:31,192 - INFO - Resolvendo o sistema para encontrar solução básica viável
+2025-05-08 23:20:31,194 - DEBUG - Valor da função objetivo: -0.0
+2025-05-08 23:20:31,194 - INFO - Solução básica viável:
+2025-05-08 23:20:31,195 - DEBUG - x1 = 0.0
+2025-05-08 23:20:31,195 - DEBUG - x2 = 0.0
+2025-05-08 23:20:31,195 - DEBUG - x3 = 0.0
+2025-05-08 23:20:31,196 - DEBUG - x4 = 0.0
+2025-05-08 23:20:31,196 - DEBUG - f5 = 225.0
+2025-05-08 23:20:31,196 - DEBUG - f6 = 117.0
+2025-05-08 23:20:31,197 - DEBUG - f7 = 420.0
+2025-05-08 23:20:31,197 - INFO - Interação 1
+2025-05-08 23:20:31,198 - INFO - Custos reduzido:
+2025-05-08 23:20:31,199 - DEBUG - s1 = [-19.]
+2025-05-08 23:20:31,200 - DEBUG - s2 = [-13.]
+2025-05-08 23:20:31,201 - DEBUG - s3 = [-12.]
+2025-05-08 23:20:31,202 - DEBUG - s4 = [-17.]
+2025-05-08 23:20:31,203 - DEBUG - Menor valor em c: -19.0
+2025-05-08 23:20:31,204 - DEBUG - Sim, é possível melhorar a solução.
+2025-05-08 23:20:31,204 - DEBUG - 
 Variável que vai entrar na base: ['x1']
-2025-05-07 15:11:30,816 - DEBUG - Variável que vai sair da base: ['f5']
-2025-05-07 15:11:30,816 - DEBUG - Valor máximo que a variável de entrada pode assumir: 75.0
-2025-05-07 15:11:30,819 - DEBUG - 
+2025-05-08 23:20:31,205 - DEBUG - Variável que vai sair da base: ['f5']
+2025-05-08 23:20:31,205 - DEBUG - Valor máximo que a variável de entrada pode assumir: 75.0
+2025-05-08 23:20:31,208 - DEBUG - 
 Novo valor da função objetivo: 1425.0
-2025-05-07 15:11:30,819 - INFO - Nova solução básica viável:
-2025-05-07 15:11:30,819 - DEBUG - x1 = 75.0
-2025-05-07 15:11:30,819 - DEBUG - x2 = 0.0
-2025-05-07 15:11:30,819 - DEBUG - x3 = 0.0
-2025-05-07 15:11:30,820 - DEBUG - x4 = 0.0
-2025-05-07 15:11:30,820 - DEBUG - f5 = 0.0
-2025-05-07 15:11:30,820 - DEBUG - f6 = 42.00000000000001
-2025-05-07 15:11:30,820 - DEBUG - f7 = 120.0
-2025-05-07 15:11:30,820 - INFO - Interação 2
-2025-05-07 15:11:30,821 - INFO - Custos reduzido:
-2025-05-07 15:11:30,821 - DEBUG - s2 = [-0.3333333333333339]
-2025-05-07 15:11:30,822 - DEBUG - s3 = [-5.666666666666667]
-2025-05-07 15:11:30,822 - DEBUG - s4 = [-4.333333333333334]
-2025-05-07 15:11:30,823 - DEBUG - s5 = [6.333333333333333]
-2025-05-07 15:11:30,823 - DEBUG - Menor valor em c: -5.666666666666667
-2025-05-07 15:11:30,823 - DEBUG - Sim, é possível melhorar a solução.
-2025-05-07 15:11:30,824 - DEBUG - 
+2025-05-08 23:20:31,208 - INFO - Nova solução básica viável:
+2025-05-08 23:20:31,208 - DEBUG - x1 = 75.0
+2025-05-08 23:20:31,208 - DEBUG - x2 = 0.0
+2025-05-08 23:20:31,208 - DEBUG - x3 = 0.0
+2025-05-08 23:20:31,209 - DEBUG - x4 = 0.0
+2025-05-08 23:20:31,209 - DEBUG - f5 = 0.0
+2025-05-08 23:20:31,209 - DEBUG - f6 = 42.00000000000001
+2025-05-08 23:20:31,209 - DEBUG - f7 = 120.0
+2025-05-08 23:20:31,209 - INFO - Interação 2
+2025-05-08 23:20:31,210 - INFO - Custos reduzido:
+2025-05-08 23:20:31,210 - DEBUG - s2 = [-0.33333333]
+2025-05-08 23:20:31,211 - DEBUG - s3 = [-5.66666667]
+2025-05-08 23:20:31,212 - DEBUG - s4 = [-4.33333333]
+2025-05-08 23:20:31,212 - DEBUG - s5 = [6.33333333]
+2025-05-08 23:20:31,212 - DEBUG - Menor valor em c: -5.666666666666667
+2025-05-08 23:20:31,213 - DEBUG - Sim, é possível melhorar a solução.
+2025-05-08 23:20:31,213 - DEBUG - 
 Variável que vai entrar na base: ['x3']
-2025-05-07 15:11:30,824 - DEBUG - Variável que vai sair da base: ['f6']
-2025-05-07 15:11:30,825 - DEBUG - Valor máximo que a variável de entrada pode assumir: 63.00000000000001
-2025-05-07 15:11:30,827 - DEBUG - 
+2025-05-08 23:20:31,214 - DEBUG - Variável que vai sair da base: ['f6']
+2025-05-08 23:20:31,214 - DEBUG - Valor máximo que a variável de entrada pode assumir: 63.00000000000001
+2025-05-08 23:20:31,218 - DEBUG - 
 Novo valor da função objetivo: 1782.0
-2025-05-07 15:11:30,828 - INFO - Nova solução básica viável:
-2025-05-07 15:11:30,828 - DEBUG - x1 = 54.0
-2025-05-07 15:11:30,828 - DEBUG - x2 = 0.0
-2025-05-07 15:11:30,828 - DEBUG - x3 = 63.0
-2025-05-07 15:11:30,828 - DEBUG - x4 = 0.0
-2025-05-07 15:11:30,828 - DEBUG - f5 = 0.0
-2025-05-07 15:11:30,828 - DEBUG - f6 = 0.0
-2025-05-07 15:11:30,829 - DEBUG - f7 = 15.0
-2025-05-07 15:11:30,829 - INFO - Interação 3
-2025-05-07 15:11:30,829 - INFO - Custos reduzido:
-2025-05-07 15:11:30,830 - DEBUG - s2 = [2.5]
-2025-05-07 15:11:30,830 - DEBUG - s4 = [-1.5]
-2025-05-07 15:11:30,831 - DEBUG - s5 = [3.5]
-2025-05-07 15:11:30,831 - DEBUG - s6 = [8.5]
-2025-05-07 15:11:30,831 - DEBUG - Menor valor em c: -1.5
-2025-05-07 15:11:30,831 - DEBUG - Sim, é possível melhorar a solução.
-2025-05-07 15:11:30,832 - DEBUG - 
+2025-05-08 23:20:31,218 - INFO - Nova solução básica viável:
+2025-05-08 23:20:31,218 - DEBUG - x1 = 54.0
+2025-05-08 23:20:31,218 - DEBUG - x2 = 0.0
+2025-05-08 23:20:31,218 - DEBUG - x3 = 63.0
+2025-05-08 23:20:31,218 - DEBUG - x4 = 0.0
+2025-05-08 23:20:31,219 - DEBUG - f5 = 0.0
+2025-05-08 23:20:31,219 - DEBUG - f6 = 0.0
+2025-05-08 23:20:31,219 - DEBUG - f7 = 15.0
+2025-05-08 23:20:31,219 - INFO - Interação 3
+2025-05-08 23:20:31,220 - INFO - Custos reduzido:
+2025-05-08 23:20:31,220 - DEBUG - s2 = [2.5]
+2025-05-08 23:20:31,221 - DEBUG - s4 = [-1.5]
+2025-05-08 23:20:31,221 - DEBUG - s5 = [3.5]
+2025-05-08 23:20:31,222 - DEBUG - s6 = [8.5]
+2025-05-08 23:20:31,222 - DEBUG - Menor valor em c: -1.5
+2025-05-08 23:20:31,222 - DEBUG - Sim, é possível melhorar a solução.
+2025-05-08 23:20:31,223 - DEBUG - 
 Variável que vai entrar na base: ['x4']
-2025-05-07 15:11:30,832 - DEBUG - Variável que vai sair da base: ['f7']
-2025-05-07 15:11:30,833 - DEBUG - Valor máximo que a variável de entrada pode assumir: 30.0
-2025-05-07 15:11:30,835 - DEBUG - 
+2025-05-08 23:20:31,223 - DEBUG - Variável que vai sair da base: ['f7']
+2025-05-08 23:20:31,224 - DEBUG - Valor máximo que a variável de entrada pode assumir: 30.0
+2025-05-08 23:20:31,226 - DEBUG - 
 Novo valor da função objetivo: 1827.0
-2025-05-07 15:11:30,835 - INFO - Nova solução básica viável:
-2025-05-07 15:11:30,835 - DEBUG - x1 = 39.0
-2025-05-07 15:11:30,835 - DEBUG - x2 = 0.0
-2025-05-07 15:11:30,835 - DEBUG - x3 = 47.999999999999986
-2025-05-07 15:11:30,836 - DEBUG - x4 = 30.00000000000007
-2025-05-07 15:11:30,836 - DEBUG - f5 = 0.0
-2025-05-07 15:11:30,836 - DEBUG - f6 = 0.0
-2025-05-07 15:11:30,836 - DEBUG - f7 = 0.0
-2025-05-07 15:11:30,836 - INFO - Interação 4
-2025-05-07 15:11:30,837 - INFO - Custos reduzido:
-2025-05-07 15:11:30,837 - DEBUG - s2 = [1.0]
-2025-05-07 15:11:30,837 - DEBUG - s5 = [2.0]
-2025-05-07 15:11:30,838 - DEBUG - s6 = [1.0]
-2025-05-07 15:11:30,838 - DEBUG - s7 = [3.0]
-2025-05-07 15:11:30,838 - DEBUG - Menor valor em c: 1.0
-2025-05-07 15:11:30,839 - ERROR - Não, não é possível melhorar a solução.
-2025-05-07 15:11:30,839 - INFO - Solução Otima do Primal:
-2025-05-07 15:11:30,841 - INFO - Solução do Dual:
-2025-05-07 15:11:30,841 - DEBUG - Valor ótimo da função objetivo: 1827.0
-2025-05-07 15:11:30,842 - DEBUG - y1 = 2.0 (Componente que limita a produção)
-2025-05-07 15:11:30,843 - DEBUG - y2 = 1.0 (Componente que limita a produção)
-2025-05-07 15:11:30,843 - DEBUG - y3 = 3.0 (Componente que limita a produção)
-2025-05-07 15:11:30,843 - INFO - O componente que mais limita a produção é y3
-2025-05-07 15:11:30,844 - INFO - Fazendo analise de sensibilidade.
-2025-05-07 15:11:30,845 - DEBUG - Restrição 1 | 225.0000 <= 225 | y1 = -2.0000 (limitante)
-2025-05-07 15:11:30,845 - DEBUG - Restrição 2 | 117.0000 <= 117 | y2 = -1.0000 (limitante)
-2025-05-07 15:11:30,845 - DEBUG - Restrição 3 | 420.0000 <= 420 | y3 = -3.0000 (limitante)
-2025-05-07 15:11:30,846 - DEBUG - Variável x1 = 39.0000 | Custo reduzido = 0.0 | Coeficiente = 19
-2025-05-07 15:11:30,846 - DEBUG - Variável x2 = 0.0000 | Custo reduzido = 1.0 | Coeficiente = 13
-2025-05-07 15:11:30,847 - DEBUG - Variável x3 = 48.0000 | Custo reduzido = 0.0 | Coeficiente = 12
-2025-05-07 15:11:30,847 - DEBUG - Variável x4 = 30.0000 | Custo reduzido = 0.0 | Coeficiente = 17
-2025-05-07 15:11:36,379 - INFO - Lendo o modelo.
-2025-05-07 15:11:36,383 - INFO - Imprimindo modelo primal.
-2025-05-07 15:11:36,384 - DEBUG - - Tipo: Min
-2025-05-07 15:11:36,385 - DEBUG - - Vetor x: [['x1']
+2025-05-08 23:20:31,227 - INFO - Nova solução básica viável:
+2025-05-08 23:20:31,227 - DEBUG - x1 = 39.0
+2025-05-08 23:20:31,227 - DEBUG - x2 = 0.0
+2025-05-08 23:20:31,227 - DEBUG - x3 = 47.999999999999986
+2025-05-08 23:20:31,227 - DEBUG - x4 = 30.00000000000007
+2025-05-08 23:20:31,227 - DEBUG - f5 = 0.0
+2025-05-08 23:20:31,227 - DEBUG - f6 = 0.0
+2025-05-08 23:20:31,227 - DEBUG - f7 = 0.0
+2025-05-08 23:20:31,228 - INFO - Interação 4
+2025-05-08 23:20:31,228 - INFO - Custos reduzido:
+2025-05-08 23:20:31,229 - DEBUG - s2 = [1.]
+2025-05-08 23:20:31,229 - DEBUG - s5 = [2.]
+2025-05-08 23:20:31,230 - DEBUG - s6 = [1.]
+2025-05-08 23:20:31,230 - DEBUG - s7 = [3.]
+2025-05-08 23:20:31,231 - DEBUG - Menor valor em c: 1.0
+2025-05-08 23:20:31,231 - ERROR - Não, não é possível melhorar a solução.
+2025-05-08 23:20:31,232 - INFO - Solução Otima do Primal:
+2025-05-08 23:20:31,233 - INFO - Solução do Dual:
+2025-05-08 23:20:31,234 - DEBUG - Valor ótimo da função objetivo: 1827.0
+2025-05-08 23:20:31,234 - DEBUG - y1 = 2.0 (Componente que limita a produção)
+2025-05-08 23:20:31,235 - DEBUG - y2 = 1.0 (Componente que limita a produção)
+2025-05-08 23:20:31,235 - DEBUG - y3 = 3.0 (Componente que limita a produção)
+2025-05-08 23:20:31,235 - INFO - O componente que mais limita a produção é y3
+2025-05-08 23:20:31,236 - INFO - Fazendo analise de sensibilidade.
+2025-05-08 23:20:31,237 - DEBUG - Restrição 1 | 225.0000 <= 225.0 | y1 = -2.0000 (limitante)
+2025-05-08 23:20:31,237 - DEBUG - Restrição 2 | 117.0000 <= 117.0 | y2 = -1.0000 (limitante)
+2025-05-08 23:20:31,237 - DEBUG - Restrição 3 | 420.0000 <= 420.0 | y3 = -3.0000 (limitante)
+2025-05-08 23:20:31,238 - DEBUG - Variável x1 = 39.0000 | Custo reduzido = 0.0 | Coeficiente = 19
+2025-05-08 23:20:31,238 - DEBUG - Variável x2 = 0.0000 | Custo reduzido = 1.0 | Coeficiente = 13
+2025-05-08 23:20:31,239 - DEBUG - Variável x3 = 48.0000 | Custo reduzido = 0.0 | Coeficiente = 12
+2025-05-08 23:20:31,239 - DEBUG - Variável x4 = 30.0000 | Custo reduzido = 0.0 | Coeficiente = 17
+2025-05-08 23:20:36,622 - INFO - Lendo o modelo.
+2025-05-08 23:20:36,627 - INFO - Imprimindo modelo primal.
+2025-05-08 23:20:36,628 - DEBUG - - Tipo: Min
+2025-05-08 23:20:36,629 - DEBUG - - Vetor x: [['x1']
  ['x2']]
-2025-05-07 15:11:36,385 - DEBUG - - Vetor c: [[2 1]]
-2025-05-07 15:11:36,386 - DEBUG - - Matriz A:
-[[-2 3]
- [3 2]]
-2025-05-07 15:11:36,386 - DEBUG - - Vetor b: [[ 9]
- [12]]
-2025-05-07 15:11:36,387 - DEBUG - - Sinais das restrições: ['>=', '>=']
-2025-05-07 15:11:36,389 - INFO - Transformando modelo primal na forma padrão.
-2025-05-07 15:11:36,390 - DEBUG - - Tipo: Min
-2025-05-07 15:11:36,390 - DEBUG - - Vetor x: [['x1']
+2025-05-08 23:20:36,629 - DEBUG - - Vetor c: [[2 1]]
+2025-05-08 23:20:36,630 - DEBUG - - Matriz A:
+[[-2  3]
+ [ 3  2]]
+2025-05-08 23:20:36,630 - DEBUG - - Vetor b: [[ 9.]
+ [12.]]
+2025-05-08 23:20:36,631 - DEBUG - - Sinais das restrições: ['>=', '>=']
+2025-05-08 23:20:36,633 - INFO - Transformando modelo primal na forma padrão.
+2025-05-08 23:20:36,633 - DEBUG - - Tipo: Min
+2025-05-08 23:20:36,634 - DEBUG - - Vetor x: [['x1']
  ['x2']
  ['e3']
  ['w4']
  ['e5']
  ['w6']]
-2025-05-07 15:11:36,391 - DEBUG - - Vetor c: [[2 1 0 0 0 0]]
-2025-05-07 15:11:36,391 - DEBUG - - Matriz A:
-[[-2 3 -1.0 1.0 0.0 0.0]
- [3 2 0.0 0.0 -1.0 1.0]]
-2025-05-07 15:11:36,391 - DEBUG - - Vetor b: [[ 9]
- [12]]
-2025-05-07 15:11:36,392 - DEBUG - - Sinais das restrições: ['=', '=']
-2025-05-07 15:11:36,392 - INFO - Gerando modelo dual.
-2025-05-07 15:11:36,394 - DEBUG - - Tipo: Max
-2025-05-07 15:11:36,395 - DEBUG - - Vetor y: [['y1']
+2025-05-08 23:20:36,634 - DEBUG - - Vetor c: [[2 1 0 0 0 0]]
+2025-05-08 23:20:36,635 - DEBUG - - Matriz A:
+[[-2.  3. -1.  1.  0.  0.]
+ [ 3.  2.  0.  0. -1.  1.]]
+2025-05-08 23:20:36,635 - DEBUG - - Vetor b: [[ 9.]
+ [12.]]
+2025-05-08 23:20:36,636 - DEBUG - - Sinais das restrições: ['=', '=']
+2025-05-08 23:20:36,636 - INFO - Gerando modelo dual.
+2025-05-08 23:20:36,639 - DEBUG - - Tipo: Max
+2025-05-08 23:20:36,639 - DEBUG - - Vetor y: [['y1']
  ['y2']]
-2025-05-07 15:11:36,395 - DEBUG - - Vetor b_dual: [[2]
- [1]
- [0]
- [0]
- [0]
- [0]]
-2025-05-07 15:11:36,396 - DEBUG - - Matriz A_dual:
-[[-2 3]
- [3 2]
- [-1.0 0.0]
- [1.0 0.0]
- [0.0 -1.0]
- [0.0 1.0]]
-2025-05-07 15:11:36,396 - DEBUG - - Vetor c_dual: [[ 9 12]]
-2025-05-07 15:11:36,396 - DEBUG - - Sinais das restrições: ['<=', '<=']
-2025-05-07 15:11:36,397 - INFO - Verificando de o modelo e factivel.
-2025-05-07 15:11:36,398 - INFO - Modelo tem variaveis artificiais.
-2025-05-07 15:11:36,399 - DEBUG - Nova função objetivo (Fase 1): [[0 0 0 0 1 1]]
-2025-05-07 15:11:36,400 - INFO - Resolvendo o simplex fase 1.
-2025-05-07 15:11:36,401 - DEBUG - Invertendo matriz A.
-2025-05-07 15:11:36,403 - INFO - Resolvendo o sistema para encontrar solução básica viável
-2025-05-07 15:11:36,405 - DEBUG - Valor da função objetivo: -21.0
-2025-05-07 15:11:36,406 - INFO - Solução básica viável:
-2025-05-07 15:11:36,406 - DEBUG - x1 = 0.0
-2025-05-07 15:11:36,406 - DEBUG - x2 = 0.0
-2025-05-07 15:11:36,407 - DEBUG - e3 = 0.0
-2025-05-07 15:11:36,407 - DEBUG - e5 = 0.0
-2025-05-07 15:11:36,407 - DEBUG - w4 = 9.0
-2025-05-07 15:11:36,408 - DEBUG - w6 = 12.0
-2025-05-07 15:11:36,408 - INFO - Interação 1
-2025-05-07 15:11:36,409 - INFO - Custos Reduzidos:
-2025-05-07 15:11:36,410 - DEBUG - s1 = [-1.0]
-2025-05-07 15:11:36,410 - DEBUG - s2 = [-5.0]
-2025-05-07 15:11:36,411 - DEBUG - s3 = [1.0]
-2025-05-07 15:11:36,412 - DEBUG - s4 = [1.0]
-2025-05-07 15:11:36,412 - DEBUG - Menor valor em c: -5.0
-2025-05-07 15:11:36,413 - DEBUG - Sim, é possível melhorar a solução.
-2025-05-07 15:11:36,414 - DEBUG - 
+2025-05-08 23:20:36,639 - DEBUG - - Vetor b_dual: [[2]
+ [1]]
+2025-05-08 23:20:36,640 - DEBUG - - Matriz A_dual:
+[[-2  3]
+ [ 3  2]]
+2025-05-08 23:20:36,640 - DEBUG - - Vetor c_dual: [[ 9. 12.]]
+2025-05-08 23:20:36,641 - DEBUG - - Sinais das restrições: ['>=', '>=']
+2025-05-08 23:20:36,641 - DEBUG - - Variaveis: ['y1 <= 0', 'y2 <= 0']
+2025-05-08 23:20:36,642 - INFO - Verificando de o modelo e factivel.
+2025-05-08 23:20:36,643 - INFO - Modelo tem variaveis artificiais.
+2025-05-08 23:20:36,644 - DEBUG - Nova função objetivo (Fase 1): [[0 0 0 0 1 1]]
+2025-05-08 23:20:36,645 - INFO - Resolvendo o simplex fase 1.
+2025-05-08 23:20:36,646 - DEBUG - Invertendo matriz A.
+2025-05-08 23:20:36,648 - INFO - Resolvendo o sistema para encontrar solução básica viável
+2025-05-08 23:20:36,650 - DEBUG - Valor da função objetivo: -21.0
+2025-05-08 23:20:36,651 - INFO - Solução básica viável:
+2025-05-08 23:20:36,651 - DEBUG - x1 = 0.0
+2025-05-08 23:20:36,652 - DEBUG - x2 = 0.0
+2025-05-08 23:20:36,652 - DEBUG - e3 = 0.0
+2025-05-08 23:20:36,652 - DEBUG - e5 = 0.0
+2025-05-08 23:20:36,653 - DEBUG - w4 = 9.0
+2025-05-08 23:20:36,653 - DEBUG - w6 = 12.0
+2025-05-08 23:20:36,653 - INFO - Interação 1
+2025-05-08 23:20:36,654 - INFO - Custos Reduzidos:
+2025-05-08 23:20:36,655 - DEBUG - s1 = [-1.]
+2025-05-08 23:20:36,656 - DEBUG - s2 = [-5.]
+2025-05-08 23:20:36,657 - DEBUG - s3 = [1.]
+2025-05-08 23:20:36,658 - DEBUG - s4 = [1.]
+2025-05-08 23:20:36,658 - DEBUG - Menor valor em c: -5.0
+2025-05-08 23:20:36,659 - DEBUG - Sim, é possível melhorar a solução.
+2025-05-08 23:20:36,660 - DEBUG - 
 Variável que vai entrar na base: ['x2']
-2025-05-07 15:11:36,415 - DEBUG - Variável que vai sair da base: ['w4']
-2025-05-07 15:11:36,415 - DEBUG - Valor máximo que a variável de entrada pode assumir: 3.0
-2025-05-07 15:11:36,418 - DEBUG - 
+2025-05-08 23:20:36,661 - DEBUG - Variável que vai sair da base: ['w4']
+2025-05-08 23:20:36,662 - DEBUG - Valor máximo que a variável de entrada pode assumir: 3.0
+2025-05-08 23:20:36,665 - DEBUG - 
 Novo valor da função objetivo: -6.0
-2025-05-07 15:11:36,419 - INFO - Nova solução básica viável:
-2025-05-07 15:11:36,419 - DEBUG - x1 = 0.0
-2025-05-07 15:11:36,420 - DEBUG - x2 = 3.0
-2025-05-07 15:11:36,420 - DEBUG - e3 = 0.0
-2025-05-07 15:11:36,421 - DEBUG - e5 = 0.0
-2025-05-07 15:11:36,421 - DEBUG - w4 = 0.0
-2025-05-07 15:11:36,421 - DEBUG - w6 = 6.0
-2025-05-07 15:11:36,422 - INFO - Interação 2
-2025-05-07 15:11:36,423 - INFO - Custos Reduzidos:
-2025-05-07 15:11:36,424 - DEBUG - s1 = [-4.333333333333333]
-2025-05-07 15:11:36,424 - DEBUG - s5 = [1.6666666666666665]
-2025-05-07 15:11:36,425 - DEBUG - s3 = [-0.6666666666666666]
-2025-05-07 15:11:36,425 - DEBUG - s4 = [1.0]
-2025-05-07 15:11:36,425 - DEBUG - Menor valor em c: -4.333333333333333
-2025-05-07 15:11:36,426 - DEBUG - Sim, é possível melhorar a solução.
-2025-05-07 15:11:36,426 - DEBUG - 
+2025-05-08 23:20:36,666 - INFO - Nova solução básica viável:
+2025-05-08 23:20:36,666 - DEBUG - x1 = 0.0
+2025-05-08 23:20:36,667 - DEBUG - x2 = 3.0
+2025-05-08 23:20:36,667 - DEBUG - e3 = 0.0
+2025-05-08 23:20:36,667 - DEBUG - e5 = 0.0
+2025-05-08 23:20:36,668 - DEBUG - w4 = 0.0
+2025-05-08 23:20:36,668 - DEBUG - w6 = 6.0
+2025-05-08 23:20:36,669 - INFO - Interação 2
+2025-05-08 23:20:36,670 - INFO - Custos Reduzidos:
+2025-05-08 23:20:36,671 - DEBUG - s1 = [-4.33333333]
+2025-05-08 23:20:36,672 - DEBUG - s5 = [1.66666667]
+2025-05-08 23:20:36,673 - DEBUG - s3 = [-0.66666667]
+2025-05-08 23:20:36,674 - DEBUG - s4 = [1.]
+2025-05-08 23:20:36,674 - DEBUG - Menor valor em c: -4.333333333333333
+2025-05-08 23:20:36,674 - DEBUG - Sim, é possível melhorar a solução.
+2025-05-08 23:20:36,675 - DEBUG - 
 Variável que vai entrar na base: ['x1']
-2025-05-07 15:11:36,427 - DEBUG - Variável que vai sair da base: ['w6']
-2025-05-07 15:11:36,427 - DEBUG - Valor máximo que a variável de entrada pode assumir: 1.3846153846153848
-2025-05-07 15:11:36,429 - DEBUG - 
+2025-05-08 23:20:36,676 - DEBUG - Variável que vai sair da base: ['w6']
+2025-05-08 23:20:36,676 - DEBUG - Valor máximo que a variável de entrada pode assumir: 1.3846153846153848
+2025-05-08 23:20:36,680 - DEBUG - 
 Novo valor da função objetivo: -0.0
-2025-05-07 15:11:36,430 - INFO - Nova solução básica viável:
-2025-05-07 15:11:36,430 - DEBUG - x1 = 1.3846153846153846
-2025-05-07 15:11:36,430 - DEBUG - x2 = 3.923076923076923
-2025-05-07 15:11:36,430 - DEBUG - e3 = 0.0
-2025-05-07 15:11:36,430 - DEBUG - e5 = 0.0
-2025-05-07 15:11:36,431 - DEBUG - w4 = 0.0
-2025-05-07 15:11:36,431 - DEBUG - w6 = 0.0
-2025-05-07 15:11:36,431 - INFO - Interação 3
-2025-05-07 15:11:36,432 - INFO - Custos Reduzidos:
-2025-05-07 15:11:36,432 - DEBUG - s6 = [1.0]
-2025-05-07 15:11:36,433 - DEBUG - s5 = [1.0]
-2025-05-07 15:11:36,433 - DEBUG - s3 = [0.0]
-2025-05-07 15:11:36,433 - DEBUG - s4 = [0.0]
-2025-05-07 15:11:36,434 - DEBUG - Menor valor em c: 0.0
-2025-05-07 15:11:36,434 - DEBUG - Não, não é possível melhorar a solução.
-2025-05-07 15:11:36,435 - INFO - Solução otima encontrada:
-2025-05-07 15:11:36,435 - DEBUG - Valor ótimo da função objetivo: -0.0
-2025-05-07 15:11:36,436 - INFO - Solução ótima:
-2025-05-07 15:11:36,436 - DEBUG - x1 = 1.3846153846153846
-2025-05-07 15:11:36,437 - DEBUG - x2 = 3.923076923076923
-2025-05-07 15:11:36,437 - DEBUG - e3 = 0.0
-2025-05-07 15:11:36,437 - DEBUG - e5 = 0.0
-2025-05-07 15:11:36,438 - DEBUG - w4 = 0.0
-2025-05-07 15:11:36,438 - DEBUG - w6 = 0.0
-2025-05-07 15:11:36,438 - INFO - Simplex fase 2
-2025-05-07 15:11:36,441 - INFO - Investendo a matriz B
-2025-05-07 15:11:36,443 - INFO - Resolvendo o sistema para encontrar solução básica viável
-2025-05-07 15:11:36,447 - DEBUG - Valor da função objetivo: -6.6923076923076925
-2025-05-07 15:11:36,447 - INFO - Solução básica viável:
-2025-05-07 15:11:36,448 - DEBUG - x1 = 1.3846153846153846
-2025-05-07 15:11:36,448 - DEBUG - x2 = 3.923076923076923
-2025-05-07 15:11:36,448 - DEBUG - e3 = 0.0
-2025-05-07 15:11:36,448 - DEBUG - e5 = 0.0
-2025-05-07 15:11:36,449 - INFO - Interação 1
-2025-05-07 15:11:36,449 - INFO - Custos reduzido:
-2025-05-07 15:11:36,450 - DEBUG - s3 = [-0.07692308]
-2025-05-07 15:11:36,451 - DEBUG - s4 = [0.61538462]
-2025-05-07 15:11:36,452 - DEBUG - Menor valor em c: -0.07692307692307696
-2025-05-07 15:11:36,452 - DEBUG - Sim, é possível melhorar a solução.
-2025-05-07 15:11:36,453 - DEBUG - 
+2025-05-08 23:20:36,681 - INFO - Nova solução básica viável:
+2025-05-08 23:20:36,681 - DEBUG - x1 = 1.3846153846153846
+2025-05-08 23:20:36,681 - DEBUG - x2 = 3.923076923076923
+2025-05-08 23:20:36,681 - DEBUG - e3 = 0.0
+2025-05-08 23:20:36,682 - DEBUG - e5 = 0.0
+2025-05-08 23:20:36,682 - DEBUG - w4 = 0.0
+2025-05-08 23:20:36,682 - DEBUG - w6 = 0.0
+2025-05-08 23:20:36,683 - INFO - Interação 3
+2025-05-08 23:20:36,683 - INFO - Custos Reduzidos:
+2025-05-08 23:20:36,684 - DEBUG - s6 = [1.]
+2025-05-08 23:20:36,685 - DEBUG - s5 = [1.]
+2025-05-08 23:20:36,686 - DEBUG - s3 = [0.]
+2025-05-08 23:20:36,687 - DEBUG - s4 = [0.]
+2025-05-08 23:20:36,687 - DEBUG - Menor valor em c: 0.0
+2025-05-08 23:20:36,687 - DEBUG - Não, não é possível melhorar a solução.
+2025-05-08 23:20:36,688 - INFO - Solução otima encontrada:
+2025-05-08 23:20:36,688 - DEBUG - Valor ótimo da função objetivo: -0.0
+2025-05-08 23:20:36,689 - INFO - Solução ótima:
+2025-05-08 23:20:36,689 - DEBUG - x1 = 1.3846153846153846
+2025-05-08 23:20:36,689 - DEBUG - x2 = 3.923076923076923
+2025-05-08 23:20:36,690 - DEBUG - e3 = 0.0
+2025-05-08 23:20:36,690 - DEBUG - e5 = 0.0
+2025-05-08 23:20:36,690 - DEBUG - w4 = 0.0
+2025-05-08 23:20:36,691 - DEBUG - w6 = 0.0
+2025-05-08 23:20:36,691 - INFO - Simplex fase 2
+2025-05-08 23:20:36,694 - INFO - Investendo a matriz B
+2025-05-08 23:20:36,696 - INFO - Resolvendo o sistema para encontrar solução básica viável
+2025-05-08 23:20:36,698 - DEBUG - Valor da função objetivo: -6.6923076923076925
+2025-05-08 23:20:36,698 - INFO - Solução básica viável:
+2025-05-08 23:20:36,698 - DEBUG - x1 = 1.3846153846153846
+2025-05-08 23:20:36,699 - DEBUG - x2 = 3.923076923076923
+2025-05-08 23:20:36,699 - DEBUG - e3 = 0.0
+2025-05-08 23:20:36,699 - DEBUG - e5 = 0.0
+2025-05-08 23:20:36,700 - INFO - Interação 1
+2025-05-08 23:20:36,701 - INFO - Custos reduzido:
+2025-05-08 23:20:36,702 - DEBUG - s3 = [-0.07692308]
+2025-05-08 23:20:36,702 - DEBUG - s4 = [0.61538462]
+2025-05-08 23:20:36,703 - DEBUG - Menor valor em c: -0.07692307692307696
+2025-05-08 23:20:36,703 - DEBUG - Sim, é possível melhorar a solução.
+2025-05-08 23:20:36,704 - DEBUG - 
 Variável que vai entrar na base: ['e3']
-2025-05-07 15:11:36,454 - DEBUG - Variável que vai sair da base: ['x1']
-2025-05-07 15:11:36,454 - DEBUG - Valor máximo que a variável de entrada pode assumir: 9.0
-2025-05-07 15:11:36,457 - DEBUG - 
+2025-05-08 23:20:36,705 - DEBUG - Variável que vai sair da base: ['x1']
+2025-05-08 23:20:36,705 - DEBUG - Valor máximo que a variável de entrada pode assumir: 9.0
+2025-05-08 23:20:36,708 - DEBUG - 
 Novo valor da função objetivo: -6.0
-2025-05-07 15:11:36,457 - INFO - Nova solução básica viável:
-2025-05-07 15:11:36,457 - DEBUG - x1 = 0.0
-2025-05-07 15:11:36,458 - DEBUG - x2 = 6.0
-2025-05-07 15:11:36,458 - DEBUG - e3 = 9.0
-2025-05-07 15:11:36,458 - DEBUG - e5 = 0.0
-2025-05-07 15:11:36,459 - INFO - Interação 2
-2025-05-07 15:11:36,459 - INFO - Custos reduzido:
-2025-05-07 15:11:36,460 - DEBUG - s1 = [0.5]
-2025-05-07 15:11:36,461 - DEBUG - s4 = [0.5]
-2025-05-07 15:11:36,461 - DEBUG - Menor valor em c: 0.5
-2025-05-07 15:11:36,461 - ERROR - Não, não é possível melhorar a solução.
-2025-05-07 15:11:36,462 - INFO - Solução Otima do Primal:
-2025-05-07 15:11:36,463 - INFO - Solução do Dual:
-2025-05-07 15:11:36,464 - DEBUG - Valor ótimo da função objetivo: -6.0
-2025-05-07 15:11:36,464 - DEBUG - y1 = 0 (Componente em abundância)
-2025-05-07 15:11:36,465 - DEBUG - y2 = 0.5 (Componente que limita a produção)
-2025-05-07 15:11:36,466 - INFO - O componente que mais limita a produção é y2
-2025-05-07 15:11:36,466 - INFO - Fazendo analise de sensibilidade.
-2025-05-07 15:11:36,467 - DEBUG - Restrição 1 | 18.0000 >= 9 | y1 = 0.0000 (abundante)
-2025-05-07 15:11:36,468 - DEBUG - Restrição 2 | 12.0000 >= 12 | y2 = 0.5000 (limitante)
-2025-05-07 15:11:36,469 - DEBUG - Variável x1 = 0.0000 | Custo reduzido = 0.5 | Coeficiente = -2
-2025-05-07 15:11:36,469 - DEBUG - Variável x2 = 6.0000 | Custo reduzido = 0.0 | Coeficiente = -1
+2025-05-08 23:20:36,708 - INFO - Nova solução básica viável:
+2025-05-08 23:20:36,708 - DEBUG - x1 = 0.0
+2025-05-08 23:20:36,708 - DEBUG - x2 = 6.0
+2025-05-08 23:20:36,708 - DEBUG - e3 = 9.0
+2025-05-08 23:20:36,709 - DEBUG - e5 = 0.0
+2025-05-08 23:20:36,709 - INFO - Interação 2
+2025-05-08 23:20:36,710 - INFO - Custos reduzido:
+2025-05-08 23:20:36,711 - DEBUG - s1 = [0.5]
+2025-05-08 23:20:36,712 - DEBUG - s4 = [0.5]
+2025-05-08 23:20:36,712 - DEBUG - Menor valor em c: 0.5
+2025-05-08 23:20:36,713 - ERROR - Não, não é possível melhorar a solução.
+2025-05-08 23:20:36,714 - INFO - Solução Otima do Primal:
+2025-05-08 23:20:36,715 - INFO - Solução do Dual:
+2025-05-08 23:20:36,716 - DEBUG - Valor ótimo da função objetivo: -6.0
+2025-05-08 23:20:36,717 - DEBUG - y1 = 0 (Componente em abundância)
+2025-05-08 23:20:36,717 - DEBUG - y2 = 0.5 (Componente que limita a produção)
+2025-05-08 23:20:36,717 - INFO - O componente que mais limita a produção é y2
+2025-05-08 23:20:36,718 - INFO - Fazendo analise de sensibilidade.
+2025-05-08 23:20:36,719 - DEBUG - Restrição 1 | 18.0000 >= 9.0 | y1 = 0.0000 (abundante)
+2025-05-08 23:20:36,719 - DEBUG - Restrição 2 | 12.0000 >= 12.0 | y2 = 0.5000 (limitante)
+2025-05-08 23:20:36,720 - DEBUG - Variável x1 = 0.0000 | Custo reduzido = 0.5 | Coeficiente = -2
+2025-05-08 23:20:36,721 - DEBUG - Variável x2 = 6.0000 | Custo reduzido = 0.0 | Coeficiente = -1
+2025-05-08 23:20:42,092 - INFO - Lendo o modelo.
+2025-05-08 23:20:42,097 - INFO - Imprimindo modelo primal.
+2025-05-08 23:20:42,097 - DEBUG - - Tipo: Min
+2025-05-08 23:20:42,097 - DEBUG - - Vetor x: [['x1']
+ ['x2']
+ ['x3']
+ ['x4']]
+2025-05-08 23:20:42,097 - DEBUG - - Vetor c: [[4 6 5 3]]
+2025-05-08 23:20:42,098 - DEBUG - - Matriz A:
+[[2 3 1 4]
+ [0 0 1 1]
+ [1 2 0 0]]
+2025-05-08 23:20:42,098 - DEBUG - - Vetor b: [[100.]
+ [ 20.]
+ [ 30.]]
+2025-05-08 23:20:42,098 - DEBUG - - Sinais das restrições: ['<=', '=', '>=']
+2025-05-08 23:20:42,101 - INFO - Transformando modelo primal na forma padrão.
+2025-05-08 23:20:42,101 - DEBUG - - Tipo: Min
+2025-05-08 23:20:42,101 - DEBUG - - Vetor x: [['x1']
+ ['x2']
+ ['x3']
+ ['x4']
+ ['f5']
+ ['w6']
+ ['e7']
+ ['w8']]
+2025-05-08 23:20:42,101 - DEBUG - - Vetor c: [[4 6 5 3 0 0 0 0]]
+2025-05-08 23:20:42,102 - DEBUG - - Matriz A:
+[[ 2.  3.  1.  4.  1.  0.  0.  0.]
+ [ 0.  0.  1.  1.  0.  1.  0.  0.]
+ [ 1.  2.  0.  0.  0.  0. -1.  1.]]
+2025-05-08 23:20:42,102 - DEBUG - - Vetor b: [[100.]
+ [ 20.]
+ [ 30.]]
+2025-05-08 23:20:42,102 - DEBUG - - Sinais das restrições: ['=', '=', '=']
+2025-05-08 23:20:42,102 - INFO - Gerando modelo dual.
+2025-05-08 23:20:42,105 - DEBUG - - Tipo: Max
+2025-05-08 23:20:42,105 - DEBUG - - Vetor y: [['y1']
+ ['y2']
+ ['y3']]
+2025-05-08 23:20:42,105 - DEBUG - - Vetor b_dual: [[4]
+ [6]
+ [5]
+ [3]]
+2025-05-08 23:20:42,106 - DEBUG - - Matriz A_dual:
+[[2 0 1]
+ [3 0 2]
+ [1 1 0]
+ [4 1 0]]
+2025-05-08 23:20:42,106 - DEBUG - - Vetor c_dual: [[100.  20.  30.]]
+2025-05-08 23:20:42,106 - DEBUG - - Sinais das restrições: ['<=', '=', '>=']
+2025-05-08 23:20:42,107 - DEBUG - - Variaveis: ['y1 >= 0', 'y2 livre', 'y3 <= 0']
+2025-05-08 23:20:42,108 - INFO - Verificando de o modelo e factivel.
+2025-05-08 23:20:42,109 - INFO - Modelo tem variaveis artificiais.
+2025-05-08 23:20:42,109 - DEBUG - Nova função objetivo (Fase 1): [[0 0 0 0 0 0 1 1]]
+2025-05-08 23:20:42,110 - INFO - Resolvendo o simplex fase 1.
+2025-05-08 23:20:42,110 - DEBUG - Invertendo matriz A.
+2025-05-08 23:20:42,112 - INFO - Resolvendo o sistema para encontrar solução básica viável
+2025-05-08 23:20:42,114 - DEBUG - Valor da função objetivo: -50.0
+2025-05-08 23:20:42,114 - INFO - Solução básica viável:
+2025-05-08 23:20:42,114 - DEBUG - x1 = 0.0
+2025-05-08 23:20:42,114 - DEBUG - x2 = 0.0
+2025-05-08 23:20:42,115 - DEBUG - x3 = 0.0
+2025-05-08 23:20:42,115 - DEBUG - x4 = 0.0
+2025-05-08 23:20:42,115 - DEBUG - f5 = 100.0
+2025-05-08 23:20:42,115 - DEBUG - e7 = 0.0
+2025-05-08 23:20:42,115 - DEBUG - w6 = 20.0
+2025-05-08 23:20:42,115 - DEBUG - w8 = 30.0
+2025-05-08 23:20:42,116 - INFO - Interação 1
+2025-05-08 23:20:42,116 - INFO - Custos Reduzidos:
+2025-05-08 23:20:42,117 - DEBUG - s1 = [-1.]
+2025-05-08 23:20:42,117 - DEBUG - s2 = [-2.]
+2025-05-08 23:20:42,118 - DEBUG - s3 = [-1.]
+2025-05-08 23:20:42,119 - DEBUG - s4 = [-1.]
+2025-05-08 23:20:42,120 - DEBUG - s6 = [1.]
+2025-05-08 23:20:42,120 - DEBUG - Menor valor em c: -2.0
+2025-05-08 23:20:42,120 - DEBUG - Sim, é possível melhorar a solução.
+2025-05-08 23:20:42,121 - DEBUG - 
+Variável que vai entrar na base: ['x2']
+2025-05-08 23:20:42,121 - DEBUG - Variável que vai sair da base: ['w8']
+2025-05-08 23:20:42,122 - DEBUG - Valor máximo que a variável de entrada pode assumir: 15.0
+2025-05-08 23:20:42,126 - DEBUG - 
+Novo valor da função objetivo: -20.0
+2025-05-08 23:20:42,127 - INFO - Nova solução básica viável:
+2025-05-08 23:20:42,127 - DEBUG - x1 = 0.0
+2025-05-08 23:20:42,127 - DEBUG - x2 = 15.0
+2025-05-08 23:20:42,127 - DEBUG - x3 = 0.0
+2025-05-08 23:20:42,127 - DEBUG - x4 = 0.0
+2025-05-08 23:20:42,128 - DEBUG - f5 = 55.0
+2025-05-08 23:20:42,128 - DEBUG - e7 = 0.0
+2025-05-08 23:20:42,128 - DEBUG - w6 = 20.0
+2025-05-08 23:20:42,128 - DEBUG - w8 = 0.0
+2025-05-08 23:20:42,128 - INFO - Interação 2
+2025-05-08 23:20:42,129 - INFO - Custos Reduzidos:
+2025-05-08 23:20:42,130 - DEBUG - s1 = [0.]
+2025-05-08 23:20:42,131 - DEBUG - s8 = [1.]
+2025-05-08 23:20:42,131 - DEBUG - s3 = [-1.]
+2025-05-08 23:20:42,132 - DEBUG - s4 = [-1.]
+2025-05-08 23:20:42,133 - DEBUG - s6 = [0.]
+2025-05-08 23:20:42,133 - DEBUG - Menor valor em c: -1.0
+2025-05-08 23:20:42,133 - DEBUG - Sim, é possível melhorar a solução.
+2025-05-08 23:20:42,134 - DEBUG - 
+Variável que vai entrar na base: ['x3']
+2025-05-08 23:20:42,134 - DEBUG - Variável que vai sair da base: ['w6']
+2025-05-08 23:20:42,135 - DEBUG - Valor máximo que a variável de entrada pode assumir: 20.0
+2025-05-08 23:20:42,139 - DEBUG - 
+Novo valor da função objetivo: -0.0
+2025-05-08 23:20:42,139 - INFO - Nova solução básica viável:
+2025-05-08 23:20:42,139 - DEBUG - x1 = 0.0
+2025-05-08 23:20:42,139 - DEBUG - x2 = 15.0
+2025-05-08 23:20:42,140 - DEBUG - x3 = 20.0
+2025-05-08 23:20:42,140 - DEBUG - x4 = 0.0
+2025-05-08 23:20:42,140 - DEBUG - f5 = 35.0
+2025-05-08 23:20:42,140 - DEBUG - e7 = 0.0
+2025-05-08 23:20:42,140 - DEBUG - w6 = 0.0
+2025-05-08 23:20:42,140 - DEBUG - w8 = 0.0
+2025-05-08 23:20:42,141 - INFO - Interação 3
+2025-05-08 23:20:42,142 - INFO - Custos Reduzidos:
+2025-05-08 23:20:42,143 - DEBUG - s1 = [0.]
+2025-05-08 23:20:42,143 - DEBUG - s8 = [1.]
+2025-05-08 23:20:42,144 - DEBUG - s7 = [1.]
+2025-05-08 23:20:42,145 - DEBUG - s4 = [0.]
+2025-05-08 23:20:42,145 - DEBUG - s6 = [0.]
+2025-05-08 23:20:42,146 - DEBUG - Menor valor em c: 0.0
+2025-05-08 23:20:42,146 - DEBUG - Não, não é possível melhorar a solução.
+2025-05-08 23:20:42,146 - INFO - Solução otima encontrada:
+2025-05-08 23:20:42,147 - DEBUG - Valor ótimo da função objetivo: -0.0
+2025-05-08 23:20:42,147 - INFO - Solução ótima:
+2025-05-08 23:20:42,147 - DEBUG - x1 = 0.0
+2025-05-08 23:20:42,148 - DEBUG - x2 = 15.0
+2025-05-08 23:20:42,148 - DEBUG - x3 = 20.0
+2025-05-08 23:20:42,148 - DEBUG - x4 = 0.0
+2025-05-08 23:20:42,149 - DEBUG - f5 = 35.0
+2025-05-08 23:20:42,149 - DEBUG - e7 = 0.0
+2025-05-08 23:20:42,150 - DEBUG - w6 = 0.0
+2025-05-08 23:20:42,150 - DEBUG - w8 = 0.0
+2025-05-08 23:20:42,150 - INFO - Simplex fase 2
+2025-05-08 23:20:42,152 - INFO - Investendo a matriz B
+2025-05-08 23:20:42,154 - INFO - Resolvendo o sistema para encontrar solução básica viável
+2025-05-08 23:20:42,157 - DEBUG - Valor da função objetivo: -190.0
+2025-05-08 23:20:42,157 - INFO - Solução básica viável:
+2025-05-08 23:20:42,157 - DEBUG - x1 = 0.0
+2025-05-08 23:20:42,157 - DEBUG - x2 = 15.0
+2025-05-08 23:20:42,157 - DEBUG - x3 = 20.0
+2025-05-08 23:20:42,158 - DEBUG - x4 = 0.0
+2025-05-08 23:20:42,158 - DEBUG - f5 = 35.0
+2025-05-08 23:20:42,158 - DEBUG - e7 = 0.0
+2025-05-08 23:20:42,158 - INFO - Interação 1
+2025-05-08 23:20:42,159 - INFO - Custos reduzido:
+2025-05-08 23:20:42,160 - DEBUG - s1 = [1.]
+2025-05-08 23:20:42,160 - DEBUG - s4 = [-2.]
+2025-05-08 23:20:42,161 - DEBUG - s6 = [3.]
+2025-05-08 23:20:42,162 - DEBUG - Menor valor em c: -2.0
+2025-05-08 23:20:42,162 - DEBUG - Sim, é possível melhorar a solução.
+2025-05-08 23:20:42,162 - DEBUG - 
+Variável que vai entrar na base: ['x4']
+2025-05-08 23:20:42,163 - DEBUG - Variável que vai sair da base: ['f5']
+2025-05-08 23:20:42,163 - DEBUG - Valor máximo que a variável de entrada pode assumir: 11.666666666666666
+2025-05-08 23:20:42,166 - DEBUG - 
+Novo valor da função objetivo: -166.66666666666666
+2025-05-08 23:20:42,166 - INFO - Nova solução básica viável:
+2025-05-08 23:20:42,166 - DEBUG - x1 = 0.0
+2025-05-08 23:20:42,167 - DEBUG - x2 = 15.0
+2025-05-08 23:20:42,167 - DEBUG - x3 = 8.333333333333332
+2025-05-08 23:20:42,167 - DEBUG - x4 = 11.666666666666664
+2025-05-08 23:20:42,167 - DEBUG - f5 = 0.0
+2025-05-08 23:20:42,167 - DEBUG - e7 = 0.0
+2025-05-08 23:20:42,167 - INFO - Interação 2
+2025-05-08 23:20:42,168 - INFO - Custos reduzido:
+2025-05-08 23:20:42,169 - DEBUG - s1 = [1.33333333]
+2025-05-08 23:20:42,169 - DEBUG - s5 = [0.66666667]
+2025-05-08 23:20:42,170 - DEBUG - s6 = [4.]
+2025-05-08 23:20:42,170 - DEBUG - Menor valor em c: 0.6666666666666665
+2025-05-08 23:20:42,170 - ERROR - Não, não é possível melhorar a solução.
+2025-05-08 23:20:42,171 - INFO - Solução Otima do Primal:
+2025-05-08 23:20:42,172 - INFO - Solução do Dual:
+2025-05-08 23:20:42,173 - DEBUG - Valor ótimo da função objetivo: -166.66666666666666
+2025-05-08 23:20:42,174 - DEBUG - y1 = 0.6666666666666665 (Componente que limita a produção)
+2025-05-08 23:20:42,174 - DEBUG - y2 = 5.666666666666666 (Componente que limita a produção)
+2025-05-08 23:20:42,175 - DEBUG - y3 = 4.0 (Componente que limita a produção)
+2025-05-08 23:20:42,175 - INFO - O componente que mais limita a produção é y2
+2025-05-08 23:20:42,175 - INFO - Fazendo analise de sensibilidade.
+2025-05-08 23:20:42,176 - DEBUG - Restrição 1 | 100.0000 <= 100.0 | y1 = -0.6667 (limitante)
+2025-05-08 23:20:42,177 - DEBUG - Restrição 2 | 20.0000 = 20.0 | y2 = 5.6667 (limitante)
+2025-05-08 23:20:42,177 - DEBUG - Restrição 3 | 30.0000 >= 30.0 | y3 = 4.0000 (limitante)
+2025-05-08 23:20:42,178 - DEBUG - Variável x1 = 0.0000 | Custo reduzido = 1.333333333333333 | Coeficiente = -4
+2025-05-08 23:20:42,178 - DEBUG - Variável x2 = 15.0000 | Custo reduzido = 0.0 | Coeficiente = -6
+2025-05-08 23:20:42,179 - DEBUG - Variável x3 = 8.3333 | Custo reduzido = 0.0 | Coeficiente = -5
+2025-05-08 23:20:42,179 - DEBUG - Variável x4 = 11.6667 | Custo reduzido = 0.0 | Coeficiente = -3
+2025-05-08 23:20:48,503 - INFO - Lendo o modelo.
+2025-05-08 23:20:48,510 - INFO - Imprimindo modelo primal.
+2025-05-08 23:20:48,510 - DEBUG - - Tipo: Max
+2025-05-08 23:20:48,511 - DEBUG - - Vetor x: [['x1']
+ ['x2']]
+2025-05-08 23:20:48,511 - DEBUG - - Vetor c: [[5 4]]
+2025-05-08 23:20:48,512 - DEBUG - - Matriz A:
+[[2 3]
+ [1 1]]
+2025-05-08 23:20:48,512 - DEBUG - - Vetor b: [[60.]
+ [10.]]
+2025-05-08 23:20:48,513 - DEBUG - - Sinais das restrições: ['<=', '>=']
+2025-05-08 23:20:48,515 - INFO - Transformando modelo primal na forma padrão.
+2025-05-08 23:20:48,516 - DEBUG - - Tipo: Min
+2025-05-08 23:20:48,516 - DEBUG - - Vetor x: [['x1']
+ ['x2']
+ ['f3']
+ ['e4']
+ ['w5']]
+2025-05-08 23:20:48,516 - DEBUG - - Vetor c: [[-5 -4  0  0  0]]
+2025-05-08 23:20:48,517 - DEBUG - - Matriz A:
+[[ 2.  3.  1.  0.  0.]
+ [ 1.  1.  0. -1.  1.]]
+2025-05-08 23:20:48,518 - DEBUG - - Vetor b: [[60.]
+ [10.]]
+2025-05-08 23:20:48,518 - DEBUG - - Sinais das restrições: ['=', '=']
+2025-05-08 23:20:48,518 - INFO - Gerando modelo dual.
+2025-05-08 23:20:48,521 - DEBUG - - Tipo: Min
+2025-05-08 23:20:48,522 - DEBUG - - Vetor y: [['y1']
+ ['y2']]
+2025-05-08 23:20:48,522 - DEBUG - - Vetor b_dual: [[5]
+ [4]]
+2025-05-08 23:20:48,522 - DEBUG - - Matriz A_dual:
+[[2 1]
+ [3 1]]
+2025-05-08 23:20:48,523 - DEBUG - - Vetor c_dual: [[60. 10.]]
+2025-05-08 23:20:48,523 - DEBUG - - Sinais das restrições: ['<=', '>=']
+2025-05-08 23:20:48,524 - DEBUG - - Variaveis: ['y1 >= 0', 'y2 <= 0']
+2025-05-08 23:20:48,524 - INFO - Verificando de o modelo e factivel.
+2025-05-08 23:20:48,525 - INFO - Modelo tem variaveis artificiais.
+2025-05-08 23:20:48,526 - DEBUG - Nova função objetivo (Fase 1): [[0 0 0 0 1]]
+2025-05-08 23:20:48,526 - INFO - Resolvendo o simplex fase 1.
+2025-05-08 23:20:48,527 - DEBUG - Invertendo matriz A.
+2025-05-08 23:20:48,533 - INFO - Resolvendo o sistema para encontrar solução básica viável
+2025-05-08 23:20:48,537 - DEBUG - Valor da função objetivo: -10.0
+2025-05-08 23:20:48,537 - INFO - Solução básica viável:
+2025-05-08 23:20:48,538 - DEBUG - x1 = 0.0
+2025-05-08 23:20:48,538 - DEBUG - x2 = 0.0
+2025-05-08 23:20:48,539 - DEBUG - f3 = 60.0
+2025-05-08 23:20:48,539 - DEBUG - e4 = 0.0
+2025-05-08 23:20:48,539 - DEBUG - w5 = 10.0
+2025-05-08 23:20:48,540 - INFO - Interação 1
+2025-05-08 23:20:48,540 - INFO - Custos Reduzidos:
+2025-05-08 23:20:48,541 - DEBUG - s1 = [-1.]
+2025-05-08 23:20:48,542 - DEBUG - s2 = [-1.]
+2025-05-08 23:20:48,543 - DEBUG - s4 = [1.]
+2025-05-08 23:20:48,543 - DEBUG - Menor valor em c: -1.0
+2025-05-08 23:20:48,543 - DEBUG - Sim, é possível melhorar a solução.
+2025-05-08 23:20:48,544 - DEBUG - 
+Variável que vai entrar na base: ['x1']
+2025-05-08 23:20:48,545 - DEBUG - Variável que vai sair da base: ['w5']
+2025-05-08 23:20:48,545 - DEBUG - Valor máximo que a variável de entrada pode assumir: 10.0
+2025-05-08 23:20:48,547 - DEBUG - 
+Novo valor da função objetivo: -0.0
+2025-05-08 23:20:48,548 - INFO - Nova solução básica viável:
+2025-05-08 23:20:48,548 - DEBUG - x1 = 10.0
+2025-05-08 23:20:48,548 - DEBUG - x2 = 0.0
+2025-05-08 23:20:48,548 - DEBUG - f3 = 40.0
+2025-05-08 23:20:48,548 - DEBUG - e4 = 0.0
+2025-05-08 23:20:48,548 - DEBUG - w5 = 0.0
+2025-05-08 23:20:48,548 - INFO - Interação 2
+2025-05-08 23:20:48,549 - INFO - Custos Reduzidos:
+2025-05-08 23:20:48,550 - DEBUG - s5 = [1.]
+2025-05-08 23:20:48,550 - DEBUG - s2 = [0.]
+2025-05-08 23:20:48,551 - DEBUG - s4 = [0.]
+2025-05-08 23:20:48,551 - DEBUG - Menor valor em c: 0.0
+2025-05-08 23:20:48,551 - DEBUG - Não, não é possível melhorar a solução.
+2025-05-08 23:20:48,552 - INFO - Solução otima encontrada:
+2025-05-08 23:20:48,553 - DEBUG - Valor ótimo da função objetivo: -0.0
+2025-05-08 23:20:48,553 - INFO - Solução ótima:
+2025-05-08 23:20:48,553 - DEBUG - x1 = 10.0
+2025-05-08 23:20:48,554 - DEBUG - x2 = 0.0
+2025-05-08 23:20:48,554 - DEBUG - f3 = 40.0
+2025-05-08 23:20:48,554 - DEBUG - e4 = 0.0
+2025-05-08 23:20:48,554 - DEBUG - w5 = 0.0
+2025-05-08 23:20:48,555 - INFO - Simplex fase 2
+2025-05-08 23:20:48,557 - INFO - Investendo a matriz B
+2025-05-08 23:20:48,558 - INFO - Resolvendo o sistema para encontrar solução básica viável
+2025-05-08 23:20:48,560 - DEBUG - Valor da função objetivo: 50.0
+2025-05-08 23:20:48,560 - INFO - Solução básica viável:
+2025-05-08 23:20:48,560 - DEBUG - x1 = 10.0
+2025-05-08 23:20:48,560 - DEBUG - x2 = 0.0
+2025-05-08 23:20:48,560 - DEBUG - f3 = 40.0
+2025-05-08 23:20:48,560 - DEBUG - e4 = 0.0
+2025-05-08 23:20:48,561 - INFO - Interação 1
+2025-05-08 23:20:48,561 - INFO - Custos reduzido:
+2025-05-08 23:20:48,562 - DEBUG - s2 = [1.]
+2025-05-08 23:20:48,562 - DEBUG - s4 = [-5.]
+2025-05-08 23:20:48,563 - DEBUG - Menor valor em c: -5.0
+2025-05-08 23:20:48,563 - DEBUG - Sim, é possível melhorar a solução.
+2025-05-08 23:20:48,563 - DEBUG - 
+Variável que vai entrar na base: ['e4']
+2025-05-08 23:20:48,564 - DEBUG - Variável que vai sair da base: ['f3']
+2025-05-08 23:20:48,564 - DEBUG - Valor máximo que a variável de entrada pode assumir: 20.0
+2025-05-08 23:20:48,566 - DEBUG - 
+Novo valor da função objetivo: 150.0
+2025-05-08 23:20:48,566 - INFO - Nova solução básica viável:
+2025-05-08 23:20:48,567 - DEBUG - x1 = 30.0
+2025-05-08 23:20:48,567 - DEBUG - x2 = 0.0
+2025-05-08 23:20:48,567 - DEBUG - f3 = 0.0
+2025-05-08 23:20:48,567 - DEBUG - e4 = 20.0
+2025-05-08 23:20:48,568 - INFO - Interação 2
+2025-05-08 23:20:48,568 - INFO - Custos reduzido:
+2025-05-08 23:20:48,570 - DEBUG - s2 = [3.5]
+2025-05-08 23:20:48,570 - DEBUG - s3 = [2.5]
+2025-05-08 23:20:48,571 - DEBUG - Menor valor em c: 2.5
+2025-05-08 23:20:48,571 - ERROR - Não, não é possível melhorar a solução.
+2025-05-08 23:20:48,572 - INFO - Solução Otima do Primal:
+2025-05-08 23:20:48,573 - INFO - Solução do Dual:
+2025-05-08 23:20:48,573 - DEBUG - Valor ótimo da função objetivo: 150.0
+2025-05-08 23:20:48,574 - DEBUG - y1 = 2.5 (Componente que limita a produção)
+2025-05-08 23:20:48,575 - DEBUG - y2 = 0 (Componente em abundância)
+2025-05-08 23:20:48,575 - INFO - O componente que mais limita a produção é y1
+2025-05-08 23:20:48,575 - INFO - Fazendo analise de sensibilidade.
+2025-05-08 23:20:48,576 - DEBUG - Restrição 1 | 60.0000 <= 60.0 | y1 = -2.5000 (limitante)
+2025-05-08 23:20:48,577 - DEBUG - Restrição 2 | 30.0000 >= 10.0 | y2 = 0.0000 (abundante)
+2025-05-08 23:20:48,577 - DEBUG - Variável x1 = 30.0000 | Custo reduzido = 0.0 | Coeficiente = 5
+2025-05-08 23:20:48,577 - DEBUG - Variável x2 = 0.0000 | Custo reduzido = 3.5 | Coeficiente = 4
+2025-05-08 23:20:54,788 - INFO - Lendo o modelo.
+2025-05-08 23:20:54,791 - INFO - Imprimindo modelo primal.
+2025-05-08 23:20:54,792 - DEBUG - - Tipo: Min
+2025-05-08 23:20:54,792 - DEBUG - - Vetor x: [['x1']
+ ['x2']
+ ['x3']]
+2025-05-08 23:20:54,792 - DEBUG - - Vetor c: [[3 2 4]]
+2025-05-08 23:20:54,792 - DEBUG - - Matriz A:
+[[1 2 1]
+ [2 1 3]
+ [1 0 1]]
+2025-05-08 23:20:54,793 - DEBUG - - Vetor b: [[100.]
+ [150.]
+ [ 40.]]
+2025-05-08 23:20:54,793 - DEBUG - - Sinais das restrições: ['<=', '=', '>=']
+2025-05-08 23:20:54,797 - INFO - Transformando modelo primal na forma padrão.
+2025-05-08 23:20:54,797 - DEBUG - - Tipo: Min
+2025-05-08 23:20:54,797 - DEBUG - - Vetor x: [['x1']
+ ['x2']
+ ['x3']
+ ['f4']
+ ['w5']
+ ['e6']
+ ['w7']]
+2025-05-08 23:20:54,798 - DEBUG - - Vetor c: [[3 2 4 0 0 0 0]]
+2025-05-08 23:20:54,798 - DEBUG - - Matriz A:
+[[ 1.  2.  1.  1.  0.  0.  0.]
+ [ 2.  1.  3.  0.  1.  0.  0.]
+ [ 1.  0.  1.  0.  0. -1.  1.]]
+2025-05-08 23:20:54,798 - DEBUG - - Vetor b: [[100.]
+ [150.]
+ [ 40.]]
+2025-05-08 23:20:54,798 - DEBUG - - Sinais das restrições: ['=', '=', '=']
+2025-05-08 23:20:54,799 - INFO - Gerando modelo dual.
+2025-05-08 23:20:54,801 - DEBUG - - Tipo: Max
+2025-05-08 23:20:54,802 - DEBUG - - Vetor y: [['y1']
+ ['y2']
+ ['y3']]
+2025-05-08 23:20:54,802 - DEBUG - - Vetor b_dual: [[3]
+ [2]
+ [4]]
+2025-05-08 23:20:54,802 - DEBUG - - Matriz A_dual:
+[[1 2 1]
+ [2 1 0]
+ [1 3 1]]
+2025-05-08 23:20:54,803 - DEBUG - - Vetor c_dual: [[100. 150.  40.]]
+2025-05-08 23:20:54,803 - DEBUG - - Sinais das restrições: ['<=', '=', '>=']
+2025-05-08 23:20:54,803 - DEBUG - - Variaveis: ['y1 >= 0', 'y2 livre', 'y3 <= 0']
+2025-05-08 23:20:54,804 - INFO - Verificando de o modelo e factivel.
+2025-05-08 23:20:54,804 - INFO - Modelo tem variaveis artificiais.
+2025-05-08 23:20:54,805 - DEBUG - Nova função objetivo (Fase 1): [[0 0 0 0 0 1 1]]
+2025-05-08 23:20:54,805 - INFO - Resolvendo o simplex fase 1.
+2025-05-08 23:20:54,806 - DEBUG - Invertendo matriz A.
+2025-05-08 23:20:54,807 - INFO - Resolvendo o sistema para encontrar solução básica viável
+2025-05-08 23:20:54,809 - DEBUG - Valor da função objetivo: -190.0
+2025-05-08 23:20:54,809 - INFO - Solução básica viável:
+2025-05-08 23:20:54,809 - DEBUG - x1 = 0.0
+2025-05-08 23:20:54,810 - DEBUG - x2 = 0.0
+2025-05-08 23:20:54,810 - DEBUG - x3 = 0.0
+2025-05-08 23:20:54,810 - DEBUG - f4 = 100.0
+2025-05-08 23:20:54,810 - DEBUG - e6 = 0.0
+2025-05-08 23:20:54,810 - DEBUG - w5 = 150.0
+2025-05-08 23:20:54,810 - DEBUG - w7 = 40.0
+2025-05-08 23:20:54,811 - INFO - Interação 1
+2025-05-08 23:20:54,811 - INFO - Custos Reduzidos:
+2025-05-08 23:20:54,812 - DEBUG - s1 = [-3.]
+2025-05-08 23:20:54,813 - DEBUG - s2 = [-1.]
+2025-05-08 23:20:54,813 - DEBUG - s3 = [-4.]
+2025-05-08 23:20:54,814 - DEBUG - s5 = [1.]
+2025-05-08 23:20:54,814 - DEBUG - Menor valor em c: -4.0
+2025-05-08 23:20:54,815 - DEBUG - Sim, é possível melhorar a solução.
+2025-05-08 23:20:54,815 - DEBUG - 
+Variável que vai entrar na base: ['x3']
+2025-05-08 23:20:54,816 - DEBUG - Variável que vai sair da base: ['w7']
+2025-05-08 23:20:54,816 - DEBUG - Valor máximo que a variável de entrada pode assumir: 40.0
+2025-05-08 23:20:54,819 - DEBUG - 
+Novo valor da função objetivo: -30.0
+2025-05-08 23:20:54,819 - INFO - Nova solução básica viável:
+2025-05-08 23:20:54,819 - DEBUG - x1 = 0.0
+2025-05-08 23:20:54,819 - DEBUG - x2 = 0.0
+2025-05-08 23:20:54,819 - DEBUG - x3 = 40.0
+2025-05-08 23:20:54,819 - DEBUG - f4 = 60.0
+2025-05-08 23:20:54,819 - DEBUG - e6 = 0.0
+2025-05-08 23:20:54,819 - DEBUG - w5 = 30.0
+2025-05-08 23:20:54,820 - DEBUG - w7 = 0.0
+2025-05-08 23:20:54,820 - INFO - Interação 2
+2025-05-08 23:20:54,820 - INFO - Custos Reduzidos:
+2025-05-08 23:20:54,821 - DEBUG - s1 = [1.]
+2025-05-08 23:20:54,822 - DEBUG - s2 = [-1.]
+2025-05-08 23:20:54,822 - DEBUG - s7 = [4.]
+2025-05-08 23:20:54,823 - DEBUG - s5 = [-3.]
+2025-05-08 23:20:54,823 - DEBUG - Menor valor em c: -3.0
+2025-05-08 23:20:54,823 - DEBUG - Sim, é possível melhorar a solução.
+2025-05-08 23:20:54,824 - DEBUG - 
+Variável que vai entrar na base: ['e6']
+2025-05-08 23:20:54,824 - DEBUG - Variável que vai sair da base: ['w5']
+2025-05-08 23:20:54,824 - DEBUG - Valor máximo que a variável de entrada pode assumir: 30.0
+2025-05-08 23:20:54,827 - DEBUG - 
+Novo valor da função objetivo: -0.0
+2025-05-08 23:20:54,827 - INFO - Nova solução básica viável:
+2025-05-08 23:20:54,827 - DEBUG - x1 = 0.0
+2025-05-08 23:20:54,827 - DEBUG - x2 = 0.0
+2025-05-08 23:20:54,827 - DEBUG - x3 = 50.0
+2025-05-08 23:20:54,827 - DEBUG - f4 = 50.0
+2025-05-08 23:20:54,828 - DEBUG - e6 = 10.0
+2025-05-08 23:20:54,828 - DEBUG - w5 = 0.0
+2025-05-08 23:20:54,828 - DEBUG - w7 = 0.0
+2025-05-08 23:20:54,828 - INFO - Interação 3
+2025-05-08 23:20:54,829 - INFO - Custos Reduzidos:
+2025-05-08 23:20:54,829 - DEBUG - s1 = [0.]
+2025-05-08 23:20:54,830 - DEBUG - s2 = [0.]
+2025-05-08 23:20:54,830 - DEBUG - s7 = [1.]
+2025-05-08 23:20:54,831 - DEBUG - s6 = [1.]
+2025-05-08 23:20:54,831 - DEBUG - Menor valor em c: 0.0
+2025-05-08 23:20:54,831 - DEBUG - Não, não é possível melhorar a solução.
+2025-05-08 23:20:54,832 - INFO - Solução otima encontrada:
+2025-05-08 23:20:54,832 - DEBUG - Valor ótimo da função objetivo: -0.0
+2025-05-08 23:20:54,833 - INFO - Solução ótima:
+2025-05-08 23:20:54,833 - DEBUG - x1 = 0.0
+2025-05-08 23:20:54,833 - DEBUG - x2 = 0.0
+2025-05-08 23:20:54,834 - DEBUG - x3 = 50.0
+2025-05-08 23:20:54,834 - DEBUG - f4 = 50.0
+2025-05-08 23:20:54,834 - DEBUG - e6 = 10.0
+2025-05-08 23:20:54,835 - DEBUG - w5 = 0.0
+2025-05-08 23:20:54,835 - DEBUG - w7 = 0.0
+2025-05-08 23:20:54,835 - INFO - Simplex fase 2
+2025-05-08 23:20:54,837 - INFO - Investendo a matriz B
+2025-05-08 23:20:54,839 - INFO - Resolvendo o sistema para encontrar solução básica viável
+2025-05-08 23:20:54,840 - DEBUG - Valor da função objetivo: -200.0
+2025-05-08 23:20:54,840 - INFO - Solução básica viável:
+2025-05-08 23:20:54,840 - DEBUG - x1 = 0.0
+2025-05-08 23:20:54,840 - DEBUG - x2 = 0.0
+2025-05-08 23:20:54,840 - DEBUG - x3 = 50.0
+2025-05-08 23:20:54,841 - DEBUG - f4 = 50.0
+2025-05-08 23:20:54,841 - DEBUG - e6 = 10.0
+2025-05-08 23:20:54,841 - INFO - Interação 1
+2025-05-08 23:20:54,841 - INFO - Custos reduzido:
+2025-05-08 23:20:54,842 - DEBUG - s1 = [0.33333333]
+2025-05-08 23:20:54,843 - DEBUG - s2 = [0.66666667]
+2025-05-08 23:20:54,843 - DEBUG - Menor valor em c: 0.3333333333333335
+2025-05-08 23:20:54,843 - ERROR - Não, não é possível melhorar a solução.
+2025-05-08 23:20:54,843 - INFO - Solução Otima do Primal:
+2025-05-08 23:20:54,845 - INFO - Solução do Dual:
+2025-05-08 23:20:54,845 - DEBUG - Valor ótimo da função objetivo: -200.0
+2025-05-08 23:20:54,846 - DEBUG - y1 = 0 (Componente em abundância)
+2025-05-08 23:20:54,846 - DEBUG - y2 = 1.3333333333333333 (Componente que limita a produção)
+2025-05-08 23:20:54,847 - DEBUG - y3 = 0 (Componente em abundância)
+2025-05-08 23:20:54,847 - INFO - O componente que mais limita a produção é y2
+2025-05-08 23:20:54,847 - INFO - Fazendo analise de sensibilidade.
+2025-05-08 23:20:54,848 - DEBUG - Restrição 1 | 50.0000 <= 100.0 | y1 = 0.0000 (abundante)
+2025-05-08 23:20:54,849 - DEBUG - Restrição 2 | 150.0000 = 150.0 | y2 = 1.3333 (limitante)
+2025-05-08 23:20:54,849 - DEBUG - Restrição 3 | 50.0000 >= 40.0 | y3 = 0.0000 (abundante)
+2025-05-08 23:20:54,850 - DEBUG - Variável x1 = 0.0000 | Custo reduzido = 0.3333333333333335 | Coeficiente = -3
+2025-05-08 23:20:54,850 - DEBUG - Variável x2 = 0.0000 | Custo reduzido = 0.6666666666666667 | Coeficiente = -2
+2025-05-08 23:20:54,851 - DEBUG - Variável x3 = 50.0000 | Custo reduzido = 0.0 | Coeficiente = -4

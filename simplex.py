@@ -11,28 +11,29 @@ logging.basicConfig(
 # Alterar o nome da aba para 'Modelo_2', 'Modelo_3', para usar outro modelo
 # df = pd.read_excel('Modelos_Simplex.xlsx', sheet_name='Modelo_1')
 # df = pd.read_excel('Modelos_Simplex.xlsx', sheet_name='Modelo_2')
-df = pd.read_excel('Modelos_Simplex.xlsx', sheet_name='Modelo_3')
+# df = pd.read_excel('Modelos_Simplex.xlsx', sheet_name='Modelo_3')
+# df = pd.read_excel('Modelos_Simplex.xlsx', sheet_name='Modelo_4')
+# df = pd.read_excel('Modelos_Simplex.xlsx', sheet_name='Modelo_5')
+df = pd.read_excel('Modelos_Simplex.xlsx', sheet_name='Modelo_6')
 
 print("\n====== LENDO O MODELO ======")
 print(df)
 logging.info("Lendo o modelo.")
 
 # Variáveis e parâmetros do modelo
-tipo_objetivo = df['Objetivo'][0]
+tipo_objetivo = df.iloc[0, 0]
 
-variaveis = df['Unnamed: 0'].dropna().tolist()[1:]
+variaveis = df.columns[1:-2].tolist()
 variaveis = np.array(variaveis).reshape(-1, 1)
 
-c = df['Objetivo'][1:].dropna().tolist()
+c = df.iloc[0, 1:-2].tolist()
 c = np.array(c).reshape(1, -1)
 
-# Verifique se a matriz A está sendo extraída corretamente
-A = df.iloc[1:-2, 2:].values.T
+A = df.iloc[1:, 1:-2].fillna(0).values
 
-b = df.iloc[-1, 2:].values.tolist()
-b = np.array(b).reshape(-1, 1)
+b = df.iloc[1:, -1].values.reshape(-1, 1)
 
-sinais = df.iloc[-2, 2:].values.tolist()
+sinais = df.iloc[1:, -2].tolist()
 
 # Exibindo o modelo inicial
 print("\n====== MODELO PRIMAL ======")
@@ -117,7 +118,7 @@ logging.debug(f"- Sinais das restrições: {sinais_padrao}")
 # Gerando o problema dual
 print("\n====== GERAÇÃO DO PROBLEMA DUAL ======")
 logging.info("Gerando modelo dual.")
-if tipo_objetivo_padrao == 'Max':
+if tipo_objetivo == 'Max':
     tipo_objetivo_dual = 'Min'
 else:
     tipo_objetivo_dual = 'Max'
@@ -125,15 +126,32 @@ else:
 c_dual = b.flatten()
 c_dual = np.array(c_dual).reshape(1, -1)
 
-A_dual = A_padrao.T
+A_dual = A.T
 
-b_dual = c_padrao.flatten()
+b_dual = c.flatten()
 b_dual = np.array(b_dual).reshape(-1, 1)
 
-restricoes_var_dual = ['<='] * len(c_dual.flatten())
+sinais_restricoes_dual = []
+for s in sinais:
+    if s == '>=':
+        sinais_restricoes_dual.append('>=')
+    elif s == '<=':
+        sinais_restricoes_dual.append('<=')
+    else:
+        sinais_restricoes_dual.append('=')
+
 
 variaveis_dual = [f'y{i+1}' for i in range(len(c_dual.flatten()))]
 variaveis_dual = np.array(variaveis_dual).reshape(-1, 1)
+
+sinais_variaveis_dual = []
+for i, s in enumerate(sinais):
+    if s == '<=':
+        sinais_variaveis_dual.append(f'{variaveis_dual[i, 0]} >= 0')
+    elif s == '>=':
+        sinais_variaveis_dual.append(f'{variaveis_dual[i, 0]} <= 0')
+    else:  # s == '='
+        sinais_variaveis_dual.append(f'{variaveis_dual[i, 0]} livre')
 
 # Exibindo o modelo dual
 print("\nModelo dual:")
@@ -142,14 +160,16 @@ print(f"- Vetor y: {variaveis_dual}")
 print(f"- Vetor c_dual: {c_dual}")
 print(f"- Matriz A_dual:\n{A_dual}")
 print(f"- Vetor b_dual: {b_dual}")
-print(f"- Sinais das restrições: {restricoes_var_dual}")
+print(f"- Sinais das restrições: {sinais_restricoes_dual}")
+print(f"- Variaveis: {sinais_variaveis_dual}")
 
 logging.debug(f"- Tipo: {tipo_objetivo_dual}")
 logging.debug(f"- Vetor y: {variaveis_dual}")
 logging.debug(f"- Vetor b_dual: {b_dual}")
 logging.debug(f"- Matriz A_dual:\n{A_dual}")
 logging.debug(f"- Vetor c_dual: {c_dual}")
-logging.debug(f"- Sinais das restrições: {restricoes_var_dual}")
+logging.debug(f"- Sinais das restrições: {sinais_restricoes_dual}")
+logging.debug(f"- Variaveis: {sinais_variaveis_dual}")
 
 # Identificando as variáveis básicas e não básicas
 m, n = A_padrao.shape
@@ -191,9 +211,11 @@ if tem_artificiais:
 
     tamanho_total_variaveis = len(c_padrao_2_fase)
 
-    indices_artificiais = [i for i, nome in enumerate(novas_variaveis.flatten()) if str(nome).startswith('w')]
+    indices_artificiais_ordem = [i for i, nome in enumerate(novas_variaveis.flatten()) if str(nome).startswith('w')]
+    indices_nao_artificiais_ordem = [i for i in range(len(novas_variaveis)) if i not in indices_artificiais]
+    indices_artificiais = [i for i, nome in enumerate(novas_variaveis.flatten()) if str(nome).startswith('f') or str(nome).startswith('w')]
     indices_nao_artificiais = [i for i in range(len(novas_variaveis)) if i not in indices_artificiais]
-    ordem = indices_nao_artificiais + indices_artificiais
+    ordem = indices_nao_artificiais_ordem + indices_artificiais_ordem
     nova_ordem = ordem.copy()
 
     c_padrao_2_fase = c_padrao_2_fase.reshape(1, -1)
