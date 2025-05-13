@@ -14,7 +14,9 @@ logging.basicConfig(
 # df = pd.read_excel('Modelos_Simplex.xlsx', sheet_name='Modelo_3')
 # df = pd.read_excel('Modelos_Simplex.xlsx', sheet_name='Modelo_4')
 # df = pd.read_excel('Modelos_Simplex.xlsx', sheet_name='Modelo_5')
-df = pd.read_excel('Modelos_Simplex.xlsx', sheet_name='Modelo_6')
+# df = pd.read_excel('Modelos_Simplex.xlsx', sheet_name='Modelo_6')
+df = pd.read_excel('Modelos_Simplex.xlsx', sheet_name='Modelo_7')
+# df = pd.read_excel('Modelos_Simplex.xlsx', sheet_name='Modelo_8')
 
 print("\n====== LENDO O MODELO ======")
 print(df)
@@ -293,10 +295,12 @@ if tem_artificiais:
                 print(f"s{j + 1} = {s_j[i]}")
                 logging.debug(f"s{j + 1} = {s_j[i]}")
 
+            epsilon = 1e-8
+
             menor_c = np.min(s_j)
             print(f"Menor valor em c: {menor_c}")
             logging.debug(f"Menor valor em c: {menor_c}")
-            if menor_c < 0:
+            if menor_c < -epsilon:
                 print("Sim, é possível melhorar a solução.")
                 logging.debug("Sim, é possível melhorar a solução.")
             else:
@@ -326,7 +330,7 @@ if tem_artificiais:
             indice_entrada_nao_base = np.argmin(s_j)
             indice_entrada = indices_nao_artificiais_novos[indice_entrada_nao_base]
 
-            if menor_c >= 0:
+            if menor_c >= -epsilon:
                 print("Não há mais variáveis que podem entrar na base.")
                 logging.info("Não há mais variáveis que podem entrar na base.")
             var_entrada = novas_variaveis_reordenadas[indice_entrada]
@@ -483,10 +487,12 @@ if B_inv is not None:
             print(f"s{j + 1} = {s_j[i]}")
             logging.debug(f"s{j + 1} = {s_j[i]}")
 
+        epsilon = 1e-8
+
         menor_c = np.min(s_j)
         print(f"Menor valor em c: {menor_c}")
         logging.debug(f"Menor valor em c: {menor_c}")
-        if menor_c < 0:
+        if menor_c < -epsilon:
             print("Sim, é possível melhorar a solução.")
             logging.debug("Sim, é possível melhorar a solução.")
         else:
@@ -516,7 +522,7 @@ if B_inv is not None:
         indice_entrada_nao_base = np.argmin(s_j)
         indice_entrada = indices_nao_base[indice_entrada_nao_base]
 
-        if menor_c >= 0:
+        if menor_c >= -epsilon:
             print("Não há mais variáveis que podem entrar na base.")
             logging.info("Não há mais variáveis que podem entrar na base.")
         var_entrada = novas_variaveis[indice_entrada]
